@@ -44,7 +44,7 @@ class _PageistViewState extends State<PageistView> {
           'Get Paid! Playing',
           style: TextStyle(
             color: Colors.pink,
-            fontSize: 25,
+            fontSize: 30,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -53,7 +53,7 @@ class _PageistViewState extends State<PageistView> {
           'Video Game',
           style: TextStyle(
             color: Colors.pink,
-            fontSize: 25,
+            fontSize: 30,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -63,7 +63,7 @@ class _PageistViewState extends State<PageistView> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
-            fontWeight: FontWeight.bold,
+            
           ),
         ),
         Text(
@@ -71,7 +71,7 @@ class _PageistViewState extends State<PageistView> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
-            fontWeight: FontWeight.bold,
+            
           ),
         ),
         Text(
@@ -79,10 +79,10 @@ class _PageistViewState extends State<PageistView> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
-            fontWeight: FontWeight.bold,
+            
           ),
         ),
-        SizedBox(height: 4.h),
+        SizedBox(height: 5.h),
        TextButton(
           onPressed: () {
             Navigator.push(

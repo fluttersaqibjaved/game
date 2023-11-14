@@ -42,25 +42,28 @@ class _LoginViewState extends State<LoginView> {
                          ),
                       ),
                       SizedBox(height: 3.h),
-                      Text(
-                        'Welcome Back!',
-                        style: TextStyle(
-                          color: Colors.pinkAccent,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold
-                        ),
-                      ),
-                      SizedBox(height: 2.h),
-                      Text(
-                        'Hi Kindly login to continue battle',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold
-                        ),
-                      ),
-                      SizedBox(height: 4.h),
-                     Container(
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Welcome Back!',
+                            style: TextStyle(
+                              color: Colors.pinkAccent,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                          SizedBox(height: 2.h),
+                          Text(
+                            'Hi Kindly login to continue battle',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                          SizedBox(height: 5.h),
+                            Container(
                       width: 280, 
                       height: 50, 
                       child: TextField(
@@ -69,7 +72,7 @@ class _LoginViewState extends State<LoginView> {
                           labelStyle: TextStyle(
                             color: Colors.black,
                             fontSize: 15,
-                            fontWeight: FontWeight.bold,
+                            
                           ),
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.blue), 
@@ -80,6 +83,7 @@ class _LoginViewState extends State<LoginView> {
                         ),
                       ),
                     ),
+                    SizedBox(height: 1.h),
 Container(
   width: 280,
   height: 50,
@@ -90,7 +94,7 @@ Container(
       labelStyle: TextStyle(
         color: Colors.black,
         fontSize: 15,
-        fontWeight: FontWeight.bold,
+        
       ),
       focusedBorder: UnderlineInputBorder(
         borderSide: BorderSide(color: Colors.blue),
@@ -112,15 +116,19 @@ Container(
     ),
   ),
 ),
+                        ],
+                      ),
+                      
+                   
                     SizedBox(height: 2.h),
                       Padding(
                      padding: EdgeInsets.only(left: 150.0), 
                      child:  Text(
                       'Forgot password?',
-                      style: TextStyle(color: Colors.black, fontSize: 15, fontWeight: FontWeight.bold),
+                      style: TextStyle(color: Colors.black, fontSize: 15),
                     ),
                       ),
-                      SizedBox(height: 2.h),
+                      SizedBox(height: 4.h),
                         TextButton(
                     onPressed: () async {
                     },
@@ -161,15 +169,16 @@ Container(
                             ),
                         ],
                       ),
+                      SizedBox(height: 1.h),
                         Text(
                         'Dont have an account?',
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 15,
-                          fontWeight: FontWeight.bold
+                          
                         ),
                       ),
-                      SizedBox(height: 2.h),
+                      
                         TextButton(
           onPressed: () {
             Navigator.push(

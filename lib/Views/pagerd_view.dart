@@ -40,7 +40,7 @@ class _PagerdViewState extends State<PagerdView> {
           'Text, Audio and',
           style: TextStyle(
             color: Colors.pink,
-            fontSize: 25,
+            fontSize: 30,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -49,7 +49,7 @@ class _PagerdViewState extends State<PagerdView> {
           'Video Chat',
           style: TextStyle(
             color: Colors.pink,
-            fontSize: 25,
+            fontSize: 30,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -59,7 +59,7 @@ class _PagerdViewState extends State<PagerdView> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
-              fontWeight: FontWeight.bold,
+              
           ),
         ),
         Text(
@@ -67,7 +67,7 @@ class _PagerdViewState extends State<PagerdView> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
-              fontWeight: FontWeight.bold,
+              
           ),
         ),
         Text(
@@ -75,7 +75,7 @@ class _PagerdViewState extends State<PagerdView> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
-              fontWeight: FontWeight.bold,
+              
           ),
         ),
          Text(
@@ -83,7 +83,7 @@ class _PagerdViewState extends State<PagerdView> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
-            fontWeight: FontWeight.bold,
+            
           ),
         ),
         SizedBox(height: 4.h),

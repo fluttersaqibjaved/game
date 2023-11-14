@@ -12,8 +12,7 @@ class MyApp extends StatelessWidget {
     return Sizer(
       builder: (context, orientation, deviceType) {
         return MaterialApp(
-          title: 'GameTime',
-          debugShowCheckedModeBanner: false,
+          // title: 'GameTime',
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),

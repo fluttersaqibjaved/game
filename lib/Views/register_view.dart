@@ -43,7 +43,9 @@ class _RegisterViewState extends State<RegisterView> {
                          ),
                       ),
                       SizedBox(height: 3.h),
-                    
+                     Padding(
+          padding: EdgeInsets.only(left: 50.0), 
+                        child:
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -72,9 +74,7 @@ class _RegisterViewState extends State<RegisterView> {
                               fontWeight: FontWeight.bold
                             ),
                           ),
-                        ],
-                      ),
-                      SizedBox(height: 4.h),
+                           SizedBox(height: 4.h),
                         Container(
                       width: 280, 
                       height: 50, 
@@ -84,7 +84,7 @@ class _RegisterViewState extends State<RegisterView> {
                           labelStyle: TextStyle(
                             color: Colors.black,
                             fontSize: 15,
-                            fontWeight: FontWeight.bold,
+                            
                           ),
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.blue), 
@@ -95,6 +95,7 @@ class _RegisterViewState extends State<RegisterView> {
                         ),
                       ),
                     ),
+                    SizedBox(height: 1.h),
                       Container(
                       width: 280, 
                       height: 50, 
@@ -104,7 +105,7 @@ class _RegisterViewState extends State<RegisterView> {
                           labelStyle: TextStyle(
                             color: Colors.black,
                             fontSize: 15,
-                            fontWeight: FontWeight.bold,
+                            
                           ),
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.blue), 
@@ -115,8 +116,8 @@ class _RegisterViewState extends State<RegisterView> {
                         ),
                       ),
                     ),
+                    SizedBox(height: 1.h),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
                           width: 50, 
@@ -127,7 +128,7 @@ class _RegisterViewState extends State<RegisterView> {
                               labelStyle: TextStyle(
                                 color: Colors.black,
                                 fontSize: 15,
-                                fontWeight: FontWeight.bold,
+                                
                               ),
                               focusedBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(color: Colors.blue), 
@@ -140,7 +141,7 @@ class _RegisterViewState extends State<RegisterView> {
                     ),
                     SizedBox(width: 4.w),
                           Container(
-                          width: 200, 
+                          width: 220, 
                           height: 50, 
                           child: TextField(
                             decoration: InputDecoration(
@@ -148,7 +149,7 @@ class _RegisterViewState extends State<RegisterView> {
                               labelStyle: TextStyle(
                                 color: Colors.black,
                                 fontSize: 15,
-                                fontWeight: FontWeight.bold,
+                                
                               ),
                               focusedBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(color: Colors.blue), 
@@ -161,6 +162,7 @@ class _RegisterViewState extends State<RegisterView> {
                     ),
                         ],
                       ),
+                      SizedBox(height: 1.h),
                      Container(
                       width: 280, 
                       height: 50, 
@@ -170,7 +172,7 @@ class _RegisterViewState extends State<RegisterView> {
                           labelStyle: TextStyle(
                             color: Colors.black,
                             fontSize: 15,
-                            fontWeight: FontWeight.bold,
+                            
                           ),
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.blue), 
@@ -181,6 +183,7 @@ class _RegisterViewState extends State<RegisterView> {
                         ),
                       ),
                     ),
+                    SizedBox(height: 1.h),
 Container(
   width: 280,
   height: 50,
@@ -191,7 +194,7 @@ Container(
       labelStyle: TextStyle(
         color: Colors.black,
         fontSize: 15,
-        fontWeight: FontWeight.bold,
+        
       ),
       focusedBorder: UnderlineInputBorder(
         borderSide: BorderSide(color: Colors.blue),
@@ -213,6 +216,7 @@ Container(
     ),
   ),
 ),
+SizedBox(height: 1.h),
 Container(
   width: 280,
   height: 50,
@@ -223,7 +227,7 @@ Container(
       labelStyle: TextStyle(
         color: Colors.black,
         fontSize: 15,
-        fontWeight: FontWeight.bold,
+        
       ),
       focusedBorder: UnderlineInputBorder(
         borderSide: BorderSide(color: Colors.blue),
@@ -245,6 +249,9 @@ Container(
     ),
   ),
 ),
+                        ],
+                      ),
+                     ),
                       SizedBox(height: 3.h),
                         TextButton(
                     onPressed: () async {
@@ -291,10 +298,9 @@ Container(
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 15,
-                          fontWeight: FontWeight.bold
+                          
                         ),
                       ),
-                      SizedBox(height: 2.h),
                        TextButton(
           onPressed: () {
             Navigator.push(

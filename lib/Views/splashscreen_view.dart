@@ -35,7 +35,7 @@ class _SplashScreenViewState extends State<SplashScreenView> {
           ),
             Center(
             child: Padding(
-                  padding: const EdgeInsets.only(top: 220),
+                  padding: const EdgeInsets.only(top: 250),
                   child:
                    Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -53,7 +53,7 @@ class _SplashScreenViewState extends State<SplashScreenView> {
                         'GAAMETIIME',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 30,
+                          fontSize: 35,
                         ),
                       ),
                       SizedBox(height: 5),

@@ -44,7 +44,7 @@ class _PagendViewState extends State<PagendView> {
           'Schedule Games',
           style: TextStyle(
             color: Colors.pink,
-            fontSize: 25,
+            fontSize: 30,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -53,7 +53,7 @@ class _PagendViewState extends State<PagendView> {
           'With Friends',
           style: TextStyle(
             color: Colors.pink,
-            fontSize: 25,
+            fontSize: 30,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -63,7 +63,7 @@ class _PagendViewState extends State<PagendView> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
-            fontWeight: FontWeight.bold,
+            
           ),
         ),
         Text(
@@ -71,7 +71,7 @@ class _PagendViewState extends State<PagendView> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
-            fontWeight: FontWeight.bold,
+            
           ),
         ),
         Text(
@@ -79,7 +79,7 @@ class _PagendViewState extends State<PagendView> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
-            fontWeight: FontWeight.bold,
+            
           ),
         ),
         SizedBox(height: 4.h),
