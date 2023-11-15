@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gametime/Views/new_view.dart';
 import 'package:gametime/Views/register_view.dart';
 import 'package:sizer/sizer.dart';
 
@@ -131,6 +132,11 @@ Container(
                       SizedBox(height: 4.h),
                         TextButton(
                     onPressed: () async {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => NewView(),
+                            ),
+                          );
                     },
                          child: Container(
                           alignment: Alignment.center,

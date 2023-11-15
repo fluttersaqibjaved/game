@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "604227398612",
+    "project_id": "airtel-486dd",
+    "storage_bucket": "airtel-486dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604227398612:android:57c3069e158145c42c0441",
+        "android_client_info": {
+          "package_name": "www.krugb.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2lKRQU93o0BrKRW_XFPn6bIgMXlLcKzM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

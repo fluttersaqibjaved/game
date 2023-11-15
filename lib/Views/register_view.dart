@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gametime/Views/Mobile%20Number/mobilenumber_view.dart';
 import 'package:gametime/Views/login_view.dart';
 import 'package:sizer/sizer.dart';
 
@@ -10,8 +11,37 @@ class RegisterView extends StatefulWidget {
 }
 
 class _RegisterViewState extends State<RegisterView> {
-  bool _isObscure = true; 
+   bool _isPasswordHidden = true;
+  bool _isConfirmPasswordHidden = true;
+   TextEditingController _nameController = TextEditingController();
+  TextEditingController _usernameController = TextEditingController();
+  TextEditingController _numberController = TextEditingController();
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
+  TextEditingController _confirmPasswordController = TextEditingController();
 
+  @override
+  void dispose() {
+     _nameController.dispose();
+    _usernameController.dispose();
+    _numberController.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
+    _confirmPasswordController.dispose();
+    super.dispose();
+  }
+
+  void _togglePasswordVisibility() {
+    setState(() {
+      _isPasswordHidden = !_isPasswordHidden;
+    });
+  }
+
+  void _toggleConfirmPasswordVisibility() {
+    setState(() {
+      _isConfirmPasswordHidden = !_isConfirmPasswordHidden;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -44,7 +74,7 @@ class _RegisterViewState extends State<RegisterView> {
                       ),
                       SizedBox(height: 3.h),
                      Padding(
-          padding: EdgeInsets.only(left: 50.0), 
+          padding: EdgeInsets.symmetric(horizontal: 30.0),
                         child:
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,186 +105,80 @@ class _RegisterViewState extends State<RegisterView> {
                             ),
                           ),
                            SizedBox(height: 4.h),
-                        Container(
-                      width: 280, 
-                      height: 50, 
-                      child: TextField(
-                        decoration: InputDecoration(
-                          labelText: 'Full Name',
-                          labelStyle: TextStyle(
-                            color: Colors.black,
-                            fontSize: 15,
-                            
-                          ),
-                          focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.blue), 
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.pink), 
-                          ),
-                        ),
-                      ),
-                    ),
+                       TextField(
+            controller: _nameController,
+            decoration: InputDecoration(
+              labelText: 'Full Name',
+            ),
+          ),
+          SizedBox(height: 1.h),
+          TextField(
+            controller: _usernameController,
+            decoration: InputDecoration(
+              labelText: 'User Name',
+            ),
+          ),
                     SizedBox(height: 1.h),
-                      Container(
-                      width: 280, 
-                      height: 50, 
-                      child: TextField(
-                        decoration: InputDecoration(
-                          labelText: 'User Name',
-                          labelStyle: TextStyle(
-                            color: Colors.black,
-                            fontSize: 15,
-                            
-                          ),
-                          focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.blue), 
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.pink), 
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 1.h),
-                      Row(
-                        children: [
-                          Container(
-                          width: 50, 
-                          height: 50, 
-                          child: TextField(
-                            decoration: InputDecoration(
-                              labelText: '+234',
-                              labelStyle: TextStyle(
-                                color: Colors.black,
-                                fontSize: 15,
-                                
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.blue), 
-                              ),
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.pink), 
-                              ),
-                            ),
-                          ),
-                    ),
-                    SizedBox(width: 4.w),
-                          Container(
-                          width: 220, 
-                          height: 50, 
-                          child: TextField(
-                            decoration: InputDecoration(
-                              labelText: 'Your Phone',
-                              labelStyle: TextStyle(
-                                color: Colors.black,
-                                fontSize: 15,
-                                
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.blue), 
-                              ),
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.pink), 
-                              ),
-                            ),
-                          ),
-                    ),
-                        ],
-                      ),
+                       TextField(
+            controller: _numberController,
+            keyboardType: TextInputType.phone,
+            decoration: InputDecoration(
+              labelText: 'Mobile Number',
+              
+            ),
+          ),
                       SizedBox(height: 1.h),
-                     Container(
-                      width: 280, 
-                      height: 50, 
-                      child: TextField(
-                        decoration: InputDecoration(
-                          labelText: 'Email',
-                          labelStyle: TextStyle(
-                            color: Colors.black,
-                            fontSize: 15,
-                            
-                          ),
-                          focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.blue), 
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.pink), 
-                          ),
-                        ),
-                      ),
-                    ),
+                     TextField(
+            controller: _emailController,
+            keyboardType: TextInputType.emailAddress,
+            decoration: InputDecoration(
+              labelText: 'Email',
+              
+            ),
+          ),
                     SizedBox(height: 1.h),
-Container(
-  width: 280,
-  height: 50,
-  child: TextField(
-    obscureText: _isObscure, 
-    decoration: InputDecoration(
-      labelText: 'Password',
-      labelStyle: TextStyle(
-        color: Colors.black,
-        fontSize: 15,
-        
-      ),
-      focusedBorder: UnderlineInputBorder(
-        borderSide: BorderSide(color: Colors.blue),
-      ),
-      enabledBorder: UnderlineInputBorder(
-        borderSide: BorderSide(color: Colors.pink),
-      ),
-      suffixIcon: IconButton(
-        icon: Icon(
-          _isObscure ? Icons.visibility_off : Icons.visibility,
-          color: Colors.grey,
-        ),
-        onPressed: () {
-          setState(() {
-            _isObscure = !_isObscure; 
-          });
-        },
-      ),
-    ),
-  ),
-),
+                    TextField(
+            controller: _passwordController,
+            obscureText: _isPasswordHidden,
+            decoration: InputDecoration(
+              labelText: 'Password',
+              
+              suffixIcon: IconButton(
+                icon: Icon(
+                  _isPasswordHidden ? Icons.visibility : Icons.visibility_off,
+                ),
+                onPressed: _togglePasswordVisibility,
+              ),
+            ),
+          ),
 SizedBox(height: 1.h),
-Container(
-  width: 280,
-  height: 50,
-  child: TextField(
-    obscureText: _isObscure, 
-    decoration: InputDecoration(
-      labelText: 'Confirm Password',
-      labelStyle: TextStyle(
-        color: Colors.black,
-        fontSize: 15,
-        
-      ),
-      focusedBorder: UnderlineInputBorder(
-        borderSide: BorderSide(color: Colors.blue),
-      ),
-      enabledBorder: UnderlineInputBorder(
-        borderSide: BorderSide(color: Colors.pink),
-      ),
-      suffixIcon: IconButton(
-        icon: Icon(
-          _isObscure ? Icons.visibility_off : Icons.visibility,
-          color: Colors.grey,
-        ),
-        onPressed: () {
-          setState(() {
-            _isObscure = !_isObscure; 
-          });
-        },
-      ),
-    ),
-  ),
-),
+ TextField(
+            controller: _confirmPasswordController,
+            obscureText: _isConfirmPasswordHidden,
+            decoration: InputDecoration(
+              labelText: 'Confirm Password',
+              
+              suffixIcon: IconButton(
+                icon: Icon(
+                  _isConfirmPasswordHidden
+                      ? Icons.visibility
+                      : Icons.visibility_off,
+                ),
+                onPressed: _toggleConfirmPasswordVisibility,
+              ),
+            ),
+          ),
                         ],
                       ),
                      ),
                       SizedBox(height: 3.h),
                         TextButton(
                     onPressed: () async {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => MobileNumberView(),
+                            ),
+                          );
                     },
                          child: Container(
                           alignment: Alignment.center,
