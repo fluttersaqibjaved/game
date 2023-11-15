@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "604227398612",
-    "project_id": "airtel-486dd",
-    "storage_bucket": "airtel-486dd.appspot.com"
+    "project_number": "228119129125",
+    "project_id": "gametime-1362f",
+    "storage_bucket": "gametime-1362f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:604227398612:android:57c3069e158145c42c0441",
+        "mobilesdk_app_id": "1:228119129125:android:3218c3d4cedb6e0ea4a3cc",
         "android_client_info": {
-          "package_name": "www.krugb.com"
+          "package_name": "com.example.gametime"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC2lKRQU93o0BrKRW_XFPn6bIgMXlLcKzM"
+          "current_key": "AIzaSyBVjoTCy9d3WKHEhtzNREivQKdMEL8pVqA"
         }
       ],
       "services": {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:gametime/Views/Mobile%20Number/mobilenumber_view.dart';
 import 'package:gametime/Views/login_view.dart';
 import 'package:sizer/sizer.dart';
@@ -110,6 +111,10 @@ class _RegisterViewState extends State<RegisterView> {
             decoration: InputDecoration(
               labelText: 'Full Name',
             ),
+           inputFormatters: <TextInputFormatter>[
+  FilteringTextInputFormatter.allow(RegExp(r'[a-z0-9]')),
+],
+
           ),
           SizedBox(height: 1.h),
           TextField(
@@ -117,6 +122,10 @@ class _RegisterViewState extends State<RegisterView> {
             decoration: InputDecoration(
               labelText: 'User Name',
             ),
+            inputFormatters: <TextInputFormatter>[
+  FilteringTextInputFormatter.allow(RegExp(r'[a-z0-9]')),
+],
+
           ),
                     SizedBox(height: 1.h),
                        TextField(
@@ -124,8 +133,10 @@ class _RegisterViewState extends State<RegisterView> {
             keyboardType: TextInputType.phone,
             decoration: InputDecoration(
               labelText: 'Mobile Number',
-              
             ),
+            inputFormatters: <TextInputFormatter>[
+          FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
+                ],
           ),
                       SizedBox(height: 1.h),
                      TextField(

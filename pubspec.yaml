@@ -41,8 +41,10 @@ dependencies:
   page_indicator: ^0.4.1
   pin_code_fields: ^8.0.1
   intl_phone_field: ^3.2.0
-  firebase_core: ^2.22.0
   firebase_auth: ^4.14.0
+  firebase_core: ^2.22.0
+  
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
