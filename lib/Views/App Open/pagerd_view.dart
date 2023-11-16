@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gametime/Views/acccount_view.dart';
+import 'package:gametime/Views/Login%20Detail/acccount_view.dart';
 import 'package:sizer/sizer.dart';
 
 class PagerdView extends StatefulWidget {

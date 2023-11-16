@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:gametime/Views/acccount_view.dart';
+import 'package:gametime/Views/Login%20Detail/acccount_view.dart';
 import 'package:sizer/sizer.dart';
 
-class PageistView extends StatefulWidget {
-  const PageistView({super.key});
+class PagendView extends StatefulWidget {
+  const PagendView({super.key});
 
   @override
-  State<PageistView> createState() => _PageistViewState();
+  State<PagendView> createState() => _PagendViewState();
 }
 
-class _PageistViewState extends State<PageistView> {
+class _PagendViewState extends State<PagendView> {
   @override
   Widget build(BuildContext context) {
       return Scaffold(
@@ -22,26 +22,26 @@ class _PageistViewState extends State<PageistView> {
             color: Color(0xF4F8FB),
             ),
              Padding(
-  padding: EdgeInsets.only(top: 140.0), 
+  padding: EdgeInsets.only(top: 150.0), 
   child: Center(
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
+       SizedBox(
         height: 30.h,
         width: 100.w,
         child: Padding(
-          padding: EdgeInsets.only(left: 60.0), 
+          padding: EdgeInsets.only(left: 40.0), 
           child: Image.asset(
-            'assets/images/Image.png',
+            'assets/images/Group 393.png',
             fit: BoxFit.contain,
           ),
         ),
       ),
         SizedBox(height: 5.h),
         Text(
-          'Get Paid! Playing',
+          'Schedule Games',
           style: TextStyle(
             color: Colors.pink,
             fontSize: 30,
@@ -50,7 +50,7 @@ class _PageistViewState extends State<PageistView> {
         ),
         SizedBox(height: 5),
         Text(
-          'Video Game',
+          'With Friends',
           style: TextStyle(
             color: Colors.pink,
             fontSize: 30,
@@ -59,7 +59,7 @@ class _PageistViewState extends State<PageistView> {
         ),
         SizedBox(height: 4.h),
         Text(
-          'Earn points and real cash when',
+          'Easily create an upcoming',
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
@@ -67,7 +67,7 @@ class _PageistViewState extends State<PageistView> {
           ),
         ),
         Text(
-          'you win a battle with no delay in',
+          'event and get ready for battle.',
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
@@ -75,15 +75,15 @@ class _PageistViewState extends State<PageistView> {
           ),
         ),
         Text(
-          'cashing out',
+          'Yeah! real combat fella.',
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
             
           ),
         ),
-        SizedBox(height: 5.h),
-       TextButton(
+        SizedBox(height: 4.h),
+        TextButton(
           onPressed: () {
             Navigator.push(
               context,
@@ -103,7 +103,9 @@ class _PageistViewState extends State<PageistView> {
       ],
     ),
   ),
+
 ),
+
           ]
       ),
       );

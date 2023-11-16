@@ -58,7 +58,7 @@ class _MobileNumberViewState extends State<MobileNumberView> {
               
           ),
         ),
-         SizedBox(height: 5.h),
+             SizedBox(height: 5.h),
            Padding(
         padding: EdgeInsets.symmetric(horizontal: 60.0),
         child: 
@@ -87,6 +87,7 @@ class _MobileNumberViewState extends State<MobileNumberView> {
             ],
           ),
            ),
+          
         SizedBox(height: 4.h),
                   TextButton(
                     onPressed: () {

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:gametime/Views/pageist_view.dart';
-import 'package:gametime/Views/pagend_view.dart';
-import 'package:gametime/Views/pagerd_view.dart';
+import 'package:gametime/Views/Login%20Detail/login_view.dart';
+import 'package:gametime/Views/Login%20Detail/register_view.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class GameView extends StatefulWidget {
+class AccountView extends StatefulWidget {
   @override
-  State<GameView> createState() => _GameViewState();
+  State<AccountView> createState() => _AccountViewState();
 }
 
-class _GameViewState extends State<GameView> {
+class _AccountViewState extends State<AccountView> {
   final PageController _pageController = PageController();
+  
 
   @override
   Widget build(BuildContext context) {
@@ -23,23 +23,22 @@ class _GameViewState extends State<GameView> {
               controller: _pageController,
               onPageChanged: (index) {
                 setState(() {
-                 
                 });
               },
               children: [
-                PageistView(),
-                PagendView(),
-                PagerdView(),
+                RegisterView(),
+                LoginView(),
+ 
               ],
             ),
           ),
-      Container(
+     Container(
   alignment: Alignment.center,
   padding: const EdgeInsets.only(bottom: 50),
   child: SmoothPageIndicator(
     controller: _pageController,
-    count: 3,
-    effect: ScrollingDotsEffect(
+    count: 2,
+    effect: WormEffect(
       dotColor: Colors.redAccent.withOpacity(0.2),
       activeDotColor: Colors.red,
       dotHeight: 12,
@@ -48,8 +47,6 @@ class _GameViewState extends State<GameView> {
     ),
   ),
 ),
-
-
         ],
       ),
     );

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:gametime/Views/Mobile%20Number/mobilenumber_view.dart';
-import 'package:gametime/Views/login_view.dart';
+import 'package:gametime/Views/Login%20Detail/login_view.dart';
+import 'package:gametime/Views/new_view.dart';
+import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:sizer/sizer.dart';
 
 class RegisterView extends StatefulWidget {
@@ -128,16 +129,23 @@ class _RegisterViewState extends State<RegisterView> {
 
           ),
                     SizedBox(height: 1.h),
-                       TextField(
-            controller: _numberController,
-            keyboardType: TextInputType.phone,
-            decoration: InputDecoration(
-              labelText: 'Mobile Number',
+                       Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              decoration: BoxDecoration(
+                border: Border(
+                  bottom: BorderSide(color: Colors.grey), 
+                ),
+              ),
+              child: InternationalPhoneNumberInput(
+                onInputChanged: (PhoneNumber number) {
+                  print(number.phoneNumber); 
+                },
+                inputDecoration: InputDecoration(
+                  border: InputBorder.none,
+                  hintText: 'Phone Number',
+                ),
+              ),
             ),
-            inputFormatters: <TextInputFormatter>[
-          FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
-                ],
-          ),
                       SizedBox(height: 1.h),
                      TextField(
             controller: _emailController,
@@ -187,7 +195,7 @@ SizedBox(height: 1.h),
                     onPressed: () async {
                         Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => MobileNumberView(),
+                              builder: (context) => NewView(),
                             ),
                           );
                     },

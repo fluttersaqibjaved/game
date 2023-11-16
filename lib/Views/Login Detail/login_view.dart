@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gametime/Views/register_view.dart';
+import 'package:gametime/Views/Combat/Combathome_view.dart';
+import 'package:gametime/Views/Login%20Detail/forgotpassword_view.dart';
+import 'package:gametime/Views/Login%20Detail/register_view.dart';
 import 'package:sizer/sizer.dart';
 
 class LoginView extends StatefulWidget {
@@ -14,8 +16,9 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     body: SingleChildScrollView(
-        child: Stack(
+     body:  SingleChildScrollView(
+        child: 
+      Stack(
         children: [
             Container(
               width: 100.w,
@@ -24,17 +27,17 @@ class _LoginViewState extends State<LoginView> {
             ),
               Center(
             child: Padding(
-                  padding: const EdgeInsets.only(top: 50),
+                  padding: const EdgeInsets.only(top: 100),
                   child:
                    Column(
                     mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       SizedBox(
-                        height: 30.h,
+                        height: 20.h,
                         width: 100.w,
                          child: Padding(
-          padding: EdgeInsets.only(right: 40.0), 
+          padding: EdgeInsets.only(right: 120.0), 
                         child: Image.asset(
                           'assets/images/Imagelog.png',
                           fit: BoxFit.contain,
@@ -53,16 +56,16 @@ class _LoginViewState extends State<LoginView> {
                               fontWeight: FontWeight.bold
                             ),
                           ),
-                          SizedBox(height: 2.h),
+                          SizedBox(height: 1.h),
                           Text(
                             'Hi Kindly login to continue battle',
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 15,
-                              fontWeight: FontWeight.bold
+                              
                             ),
                           ),
-                          SizedBox(height: 5.h),
+                          SizedBox(height: 3.h),
                             Container(
                       width: 280, 
                       height: 50, 
@@ -120,17 +123,31 @@ Container(
                       ),
                       
                    
-                    SizedBox(height: 2.h),
+                    SizedBox(height: 1.h),
                       Padding(
                      padding: EdgeInsets.only(left: 150.0), 
+                      child: TextButton(
+                    onPressed: () async {
+                         Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => ForgotPasswordView(),
+                            ),
+                          );
+                    },
                      child:  Text(
                       'Forgot password?',
                       style: TextStyle(color: Colors.black, fontSize: 15),
                     ),
+                       ),
                       ),
-                      SizedBox(height: 4.h),
+                      SizedBox(height: 1.h),
                         TextButton(
                     onPressed: () async {
+                       Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => CombatHomeView(),
+                            ),
+                          );
                     },
                          child: Container(
                           alignment: Alignment.center,
@@ -144,7 +161,7 @@ Container(
                               style: TextStyle(color: Colors.white, fontSize: 20)),
                         ),
                        ),
-                       SizedBox(height: 3.h),
+                       SizedBox(height: 1.h),
                          Text(
                         'Connect With:',
                         style: TextStyle(
@@ -156,20 +173,25 @@ Container(
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset(
-                              'assets/images/Google+.png',
-                              height: 10.h,
-                              width: 10.w,
-                            ),
-                            SizedBox(width: 2.w),
-                            Image.asset(
-                              'assets/images/Group 394.png',
-                               height: 10.h,
-                              width: 10.w,
-                            ),
+                            SizedBox(
+        height: 10.h,
+        width: 10.w,
+        child: Image.asset(
+            'assets/images/Google+.png',
+            fit: BoxFit.contain,
+          ),
+      ),
+      SizedBox(width: 3.w),
+        SizedBox(
+        height: 10.h,
+        width: 10.w,
+        child:  Image.asset(
+           'assets/images/Group 394.png',
+            fit: BoxFit.contain,
+          ),
+      ),
                         ],
                       ),
-                      SizedBox(height: 1.h),
                         Text(
                         'Dont have an account?',
                         style: TextStyle(
@@ -178,7 +200,6 @@ Container(
                           
                         ),
                       ),
-                      
                         TextButton(
           onPressed: () {
             Navigator.push(
@@ -189,14 +210,12 @@ Container(
           child: Text(
             'Create account',
             style: TextStyle(
-              
               color: Colors.pink,
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
           ),
         ),
-                      SizedBox(height: 2.h),
                     ],
                   ),
                 ),

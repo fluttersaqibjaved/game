@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:gametime/Views/game_view.dart';
+import 'package:gametime/Views/App%20Open/game_view.dart';
 import 'package:sizer/sizer.dart';
 
 class SplashScreenView extends StatefulWidget {

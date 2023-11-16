@@ -53,7 +53,7 @@ class _VerificationSuccessfulViewState extends State<VerificationSuccessfulView>
         ),
         SizedBox(height: 2.h),
         Text(
-          'You now have ful access to',
+          'You now have full access to',
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
