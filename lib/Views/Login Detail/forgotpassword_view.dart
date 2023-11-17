@@ -31,7 +31,7 @@ TextEditingController _emailController = TextEditingController();
             color: Color(0xF4F8FB),
             ),
               Padding(
-  padding: EdgeInsets.only(top: 120.0), 
+  padding: EdgeInsets.only(top: 80.0), 
   child:
       Center(
         child: 
@@ -48,7 +48,7 @@ TextEditingController _emailController = TextEditingController();
           ),
         ),
       ),
-      SizedBox(height: 8.h),
+      SizedBox(height: 6.h),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 60.0),
                         child:
@@ -60,7 +60,7 @@ TextEditingController _emailController = TextEditingController();
                   textAlign: TextAlign.start,
                   style: TextStyle(
                     color: Colors.pink,
-                    fontSize: 15.0,
+                    fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -69,24 +69,24 @@ TextEditingController _emailController = TextEditingController();
           'Enter your email address below and we will',
           style: TextStyle(
                 color: Colors.black,
-                fontSize: 10,
-                  
+                fontSize: 12,
+                  fontWeight: FontWeight.bold,
           ),
         ),
         Text(
           'sen you an email with instructions on',
           style: TextStyle(
                 color: Colors.black,
-                fontSize: 10,
-                  
+                fontSize: 12,
+                  fontWeight: FontWeight.bold,
           ),
         ),
         Text(
           'how to change your password',
           style: TextStyle(
                 color: Colors.black,
-                fontSize: 10,
-                  
+                fontSize: 12,
+                  fontWeight: FontWeight.bold,
           ),
         ),
             SizedBox(height: 4.h),

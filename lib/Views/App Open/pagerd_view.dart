@@ -86,7 +86,7 @@ class _PagerdViewState extends State<PagerdView> {
             
           ),
         ),
-        SizedBox(height: 4.h),
+        SizedBox(height: 2.h),
       TextButton(
                         onPressed: () {
                           Navigator.of(context).push(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gametime/Views/Combat/Combathome_view.dart';
+import 'package:gametime/Views/Combat/Combat.dart';
 import 'package:gametime/Views/Login%20Detail/forgotpassword_view.dart';
 import 'package:gametime/Views/Login%20Detail/register_view.dart';
 import 'package:sizer/sizer.dart';
@@ -16,8 +16,7 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     body:  SingleChildScrollView(
-        child: 
+     body:  
       Stack(
         children: [
             Container(
@@ -27,7 +26,7 @@ class _LoginViewState extends State<LoginView> {
             ),
               Center(
             child: Padding(
-                  padding: const EdgeInsets.only(top: 100),
+                  padding: const EdgeInsets.only(top: 10),
                   child:
                    Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -145,7 +144,7 @@ Container(
                     onPressed: () async {
                        Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => CombatHomeView(),
+                              builder: (context) => Combat(),
                             ),
                           );
                     },
@@ -222,7 +221,7 @@ Container(
           ),
         ]
      ),
-     ),
+     
     );
   }
 }

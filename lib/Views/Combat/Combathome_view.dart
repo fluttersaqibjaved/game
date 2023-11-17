@@ -9,70 +9,115 @@ class CombatHomeView extends StatefulWidget {
 }
 
 class _CombatHomeViewState extends State<CombatHomeView> {
+   int _currentIndex = 0; 
 
+   bool shouldShowAppBar(int index) {
+    return index != 0;
+  } 
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(
-        backgroundColor: Colors.white, // Set the background color of the AppBar to white
-        elevation: 0,
-        bottom: PreferredSize(
-          preferredSize: Size.fromHeight(10.0), // Define the preferred height of the bottom area
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Image.asset(
-                  'assets/images/Hamburger.png',
-                  fit: BoxFit.fitWidth,
-                  width: 8.0.w,
-                ),
-                SizedBox(width: 5.0.w),
-                Row(
-                  children: [
-                    Image.asset(
-                      'assets/images/Ellipse.png',
-                      fit: BoxFit.fitWidth,
-                      width: 8.0.w,
-                    ),
-                    SizedBox(width: 2.0.w),
-                    Text(
-                      'Stone Stellar',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 8.sp,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-      body:
-       Stack(
-        children: [
-          Container(
-            width: 100.w,
-            height: 100.h,
-            color: Color(0xFFF4F8FB), 
-          ),
-                   SingleChildScrollView(
-        child:
-                   Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.0),
-        child:
-              Column(
-                    children: [
-                      Container(
+         body: 
+                       SingleChildScrollView(
+                       child:
+                       Padding(
+                       padding: EdgeInsets.symmetric(horizontal: 20.0),
+                       child:
+                       Column(
+                        children: [
+                         SizedBox(height: 4.h),
+                          Container(
+                            width: 100.w,
+                            height: 25.h,
+                            margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0xFFFF3F81),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.1),
+                                  spreadRadius: 2,
+                                  blurRadius: 3,
+                                  offset: Offset(0, 2),
+                                ),
+                              ],
+                            ),
+                          child:  Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20.0),
+                          child:
+                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Schedule',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(height: 2.h),
+                              Text(
+                                'Easily schedule event/games',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold,                   
+                                ),
+                              ),
+                              Text(
+                                'then find like minded players for',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold,                   
+                                ),
+                              ),
+                              Text(
+                                'battle. You up for it?',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold, 
+                                ),
+                                 ),
+                              SizedBox(height: 2.h),
+                                SizedBox(
+                                height: 5.h,
+                                width: 10.w,
+                                child: Image.asset(
+                                  'assets/images/Forward Arrow.png',
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                                ],
+                                 ),
+                                 SizedBox(
+                                height: 35.h,
+                                width: 35.w,
+                                child: Image.asset(
+                                  'assets/images/Image (1).png',
+                                  // fit: BoxFit.contain,
+                                ),
+                              ),
+                            ],
+                          ),
+                          ),
+                          ),
+              
+                          SizedBox(height: 2.h),
+                         Container(
                         width: 100.w,
-                        height: 20.h,
+                        height: 25.h,
                         margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.pinkAccent,
+                          color: Color(0xFFFF3F81),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black.withOpacity(0.1),
@@ -83,422 +128,376 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                           ],
                         ),
                       child:  Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.0),
-        child:
+                     padding: EdgeInsets.symmetric(horizontal: 20.0),
+                      child:
                        Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Text(
-          'Schedule',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        SizedBox(height: 2.h),
-        Text(
-          'Easily schedule event/games',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-                          
-          ),
-        ),
-        Text(
-          'then find like minded players for',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-                          
-          ),
-        ),
-        Text(
-          'battle. You up for it?',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-          ),
-        ),
-         SizedBox(height: 2.h),
-          SizedBox(
-          height: 5.h,
-          width: 10.w,
-          child: Image.asset(
-            'assets/images/Forward Arrow.png',
-            fit: BoxFit.contain,
-          ),
-        ),
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Statistics',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 2.h),
+                          Text(
+                            'All data from previous and',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 10,
+                                    fontWeight: FontWeight.bold,         
+                            ),
+                          ),
+                          Text(
+                            'upcoming games can be found here',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 10,
+                                      fontWeight: FontWeight.bold,       
+                            ),
+                          ),
+                        
+                          SizedBox(height: 2.h),
+                            SizedBox(
+                            height: 5.h,
+                            width: 10.w,
+                            child: Image.asset(
+                              'assets/images/Forward Arrow.png',
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                                                ],
+                                              ),
+                                              SizedBox(
+                            height: 35.h,
+                            width: 30.w,
+                            child: Image.asset(
+                              'assets/images/hjkhImage.png',
+                              // fit: BoxFit.contain,
+                            ),
+                          ),
+                                          ],
+                                ),
+                                ),
+                                ),
+                         SizedBox(height: 2.h),
+                         Container(
+                        width: 100.w,
+                        height: 25.h,
+                        margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xFFFF3F81),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              spreadRadius: 2,
+                              blurRadius: 3,
+                              offset: Offset(0, 2),
+                            ),
+                          ],
+                        ),
+                      child:  Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20.0),
+                      child:
+                       Row(
+                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Discover Combats',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: 2.h),
+                            Text(
+                              'Find out whats new and compete',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                                      fontWeight: FontWeight.bold,         
+                              ),
+                            ),
+                            Text(
+                              'among players with new',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                                    fontWeight: FontWeight.bold,           
+                              ),
+                                ),
+                                Text(
+                                  'challenges and earn cash with',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold, 
+                                  ),
+                                ),
+                                  Text(
+                                  'game points',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold, 
+                                  ),
+                                ),
+                                SizedBox(height: 2.h),
+                                  SizedBox(
+                                  height: 5.h,
+                                  width: 10.w,
+                                  child: Image.asset(
+                                    'assets/images/Forward Arrow.png',
+                                    fit: BoxFit.contain,
+                                  ),
+                                ),
                               ],
                             ),
                              SizedBox(
-          height: 35.h,
-          width: 25.w,
-          child: Image.asset(
-            'assets/images/Image (1).png',
-            // fit: BoxFit.contain,
-          ),
-        ),
-                        ],
-                      ),
-                      ),
-                      ),
-              
-              
-                     Container(
-                    width: 100.w,
-                    height: 20.h,
-                    margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.pinkAccent,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
-                          spreadRadius: 2,
-                          blurRadius: 3,
-                          offset: Offset(0, 2),
-                        ),
-                      ],
-                    ),
-              child:  Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.0),
-        child:
-                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Text(
-          'Statistics',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        SizedBox(height: 2.h),
-        Text(
-          'All data from previous and',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-                      
-          ),
-        ),
-        Text(
-          'upcoming games can be found here',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-                      
-          ),
-        ),
+                            height: 55.h,
+                            width: 30.w,
+                            child: Image.asset(
+                              'assets/images/bugbuImage.png',
+                              // fit: BoxFit.contain,
+                            ),
+                          ),
+                                          ],
+                                ),
+                                ),
+                                ),
+                                SizedBox(height: 2.h),
+                                Container(
+                                width: 100.w,
+                                height: 25.h,
+                                margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                 color: Color(0xFFFF3F81),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withOpacity(0.1),
+                                      spreadRadius: 2,
+                                      blurRadius: 3,
+                                      offset: Offset(0, 2),
+                                    ),
+                                  ],
+                                ),
+                              child:  Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 20.0),
+                              child:
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Message Players',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Text(
+                                    'Found the profile of a payer',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 10,
+                                                  fontWeight: FontWeight.bold, 
+                                    ),
+                                  ),
+                                  Text(
+                                    'that interests you? Start a',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 10,
+                                          fontWeight: FontWeight.bold,          
+                                    ),
+                                  ),
+                                  Text(
+                                    'conversation',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.bold, 
+                                    ),
+                                  ),
+                                SizedBox(height: 2.h),
+                                  SizedBox(
+                                  height: 5.h,
+                                  width: 10.w,
+                                  child: Image.asset(
+                                    'assets/images/Forward Arrow.png',
+                                    fit: BoxFit.contain,
+                                  ),
+                                ),
+                                                      ],
+                                                    ),
+                                                    
+                                                    SizedBox(
+                                  height: 35.h,
+                                  width: 30.w,
+                                  child: Image.asset(
+                                    'assets/images/hbiuhuih.png',
+                                    
+                                  ),
+                                ),
+                                                ],
+                                      ),
+                                      ),
+                                      ),
+                                      SizedBox(height: 2.h),
+                                                ]
+                                      ),
+                                              ),
+                                              ),
+       
+    
       
-         SizedBox(height: 2.h),
-          SizedBox(
-          height: 5.h,
-          width: 10.w,
-          child: Image.asset(
-            'assets/images/Forward Arrow.png',
-            fit: BoxFit.contain,
-          ),
-        ),
-                          ],
-                        ),
-                         SizedBox(
-          height: 35.h,
-          width: 25.w,
-          child: Image.asset(
-            'assets/images/hjkhImage.png',
-            // fit: BoxFit.contain,
-          ),
-        ),
-                    ],
-              ),
-              ),
-              ),
-                     Container(
-                    width: 100.w,
-                    height: 20.h,
-                    margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.pinkAccent,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
-                          spreadRadius: 2,
-                          blurRadius: 3,
-                          offset: Offset(0, 2),
-                        ),
-                      ],
-                    ),
-              child:  Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.0),
-        child:
-                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Text(
-          'Discover Combats',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        SizedBox(height: 2.h),
-        Text(
-          'Find out whats new and compete',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-                      
-          ),
-        ),
-        Text(
-          'among players with new',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-                      
-          ),
-        ),
-        Text(
-          'challenges and earn cash with',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-          ),
-        ),
-          Text(
-          'game points',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-          ),
-        ),
-         SizedBox(height: 2.h),
-          SizedBox(
-          height: 5.h,
-          width: 10.w,
-          child: Image.asset(
-            'assets/images/Forward Arrow.png',
-            fit: BoxFit.contain,
-          ),
-        ),
-                          ],
-                        ),
-                         SizedBox(
-          height: 55.h,
-          width: 25.w,
-          child: Image.asset(
-            'assets/images/bugbuImage.png',
-            // fit: BoxFit.contain,
-          ),
-        ),
-                    ],
-              ),
-              ),
-              ),
-                     Container(
-                    width: 100.w,
-                    height: 20.h,
-                    margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.pinkAccent,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
-                          spreadRadius: 2,
-                          blurRadius: 3,
-                          offset: Offset(0, 2),
-                        ),
-                      ],
-                    ),
-              child:  Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.0),
-        child:
-                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Text(
-          'Message Players',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        SizedBox(height: 2.h),
-        Text(
-          'Found the profile of a payer',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-                      
-          ),
-        ),
-        Text(
-          'that interests you? Start a',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-                      
-          ),
-        ),
-        Text(
-          'conversation',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-          ),
-        ),
-         SizedBox(height: 2.h),
-          SizedBox(
-          height: 5.h,
-          width: 10.w,
-          child: Image.asset(
-            'assets/images/Forward Arrow.png',
-            fit: BoxFit.contain,
-          ),
-        ),
-                          ],
-                        ),
-                         SizedBox(
-          height: 35.h,
-          width: 25.w,
-          child: Image.asset(
-            'assets/images/hbiuhuih.png',
-            // fit: BoxFit.contain,
-          ),
-        ),
-                    ],
-              ),
-              ),
-              ),
-                    ]
-              ),
-                   ),
-                   ),     
-        ]
-      ),
          bottomNavigationBar: BottomAppBar(
-          color: Colors.white.withOpacity(0.9), 
-        child: SizedBox(
-  height: 15.h,
+  color: Colors.white.withOpacity(0.9), 
+  child:   SizedBox(
   width: 100.w,
-  child: Stack(
-    children: [
-      Image.asset(
-        'assets/images/Container- Task Bar.png',
-        fit: BoxFit.cover,
-        // Adjust fit as needed
-      ),
-       Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.0),
-        child:
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                    'assets/images/Statistics Icon.png',
-                    width: 24,
-                    height: 24,
-              ),
-              Text('Statistics',style: TextStyle(color: Colors.white),),
-            ],
-          ),
-          BottomAppBar(),
-          SizedBox(width: 2.w),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                    'assets/images/Location_Pin.png',
-                    width: 24,
-                    height: 24,
-              ),
-              Text('Discover',style: TextStyle(color: Colors.white),),
-            ],
-          ),
-          
-         Column(
-  children: [
-    Stack(
+  height: 20.h,
+  
+                    child:   Stack(
+                        alignment: Alignment.center, 
       children: [
-        Image.asset(
-          'assets/images/Base Ellipse.png',
-          width: 74,
-          height: 74,
-        ),
-        Positioned(
-          top: 10,
-          left: 10,
-          right: 10,
-          bottom: 10,
-          child: Image.asset(
-            'assets/images/Schedule.png',
-            width: 30,
-            height: 30,
-          ),
-        ),
-      ],
-    ),
-  ],
-),
-
-          SizedBox(width: 12.w),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                    'assets/images/Chat.png',
-                    width: 24,
-                    height: 24,
-              ),
-              Text('Chat',style: TextStyle(color: Colors.white),),
-            ],
-          ),
-          SizedBox(width: 2.w),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                    'assets/images/Profile.png',
-                    width: 24,
-                    height: 24,
-              ),
-              Text('Profile',style: TextStyle(color: Colors.white),),
-            ],
-          ),
-        ],
-      ),
-       ),
-    ],
+      SizedBox(
+  width: 100.w,
+  height: 20.h,
+  child: Image.asset(
+    'assets/images/Container- Task Bar.png',
+    fit: BoxFit.fill,
   ),
 ),
-      ),
+ Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10.0,),
+            child:
+        Row(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+              Padding(
+  padding: EdgeInsets.only(top: 20.0), 
+  child:
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/images/Statistics Icon.png',
+                  width: 28,
+                  height: 28,
+                ),
+                Text('Statistics', style: TextStyle(color: Colors.white, fontSize: 15,),),
+              ],
+            ),
+              ),
+            SizedBox(width: 1.w),
+             Padding(
+  padding: EdgeInsets.only(top: 20.0), 
+  child:
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/images/Location_Pin.png',
+                  width: 28,
+                  height: 28,
+                ),
+                Text('Discover', style: TextStyle(color: Colors.white, fontSize: 15,),),
+              ],
+            ),
+             ),
+            SizedBox(width: 1.w),
+             Padding(
+  padding: EdgeInsets.only(bottom: 0.0), 
+  child:
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Stack(
+                  // alignment: Alignment.center,
+                  children: [
+                    SizedBox(
+                      child: Image.asset(
+                        'assets/images/Base Ellipse.png',
+                        width: 20.w,
+                        height: 10.h,
+                      ),
+                    ),
+                    Positioned(
+                      top: 20,
+                      left: 20,
+                      right: 20,
+                      bottom: 20,
+                      child: SizedBox(
+                        child: Image.asset(
+                          'assets/images/Schedule.png',
+                          width: 60,
+                          height: 60,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+             ),
+            SizedBox(width: 1.w),
+             Padding(
+  padding: EdgeInsets.only(top: 20.0), 
+  child:
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/images/Chat.png',
+                  width: 28,
+                  height: 28,
+                ),
+                Text('Chat', style: TextStyle(color: Colors.white, fontSize: 15,),),
+              ],
+            ),
+             ),
+            SizedBox(width: 1.w),
+             Padding(
+  padding: EdgeInsets.only(top: 20.0), 
+  child:
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/images/Profile.png',
+                  width: 28,
+                  height: 28,
+                ),
+                Text('Profile', style: TextStyle(color: Colors.white, fontSize: 15,),),
+              ],
+            ),
+             ),
+          ],
+        ),
+ ),
+      ],
+    ),
+                   ),
+         ),
     );
   }
 }

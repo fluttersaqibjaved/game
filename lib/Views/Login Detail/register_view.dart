@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gametime/Views/Login%20Detail/login_view.dart';
-import 'package:gametime/Views/new_view.dart';
+import 'package:gametime/Views/Mobile%20Number/mobilenumber_view.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:sizer/sizer.dart';
 
@@ -195,7 +195,7 @@ SizedBox(height: 1.h),
                     onPressed: () async {
                         Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => NewView(),
+                              builder: (context) => MobileNumberView(),
                             ),
                           );
                     },
