@@ -48,6 +48,7 @@ dependencies:
   curved_nav_bar: ^0.0.2
   # image_picker: ^1.0.4
   image_picker: ^0.8.4+4
+  flutter_theme_provider: ^0.0.4
   
   
 dev_dependencies:

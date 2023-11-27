@@ -9,12 +9,8 @@ class CombatHomeView extends StatefulWidget {
 }
 
 class _CombatHomeViewState extends State<CombatHomeView> {
-   int _currentIndex = 0; 
+ 
 
-   bool shouldShowAppBar(int index) {
-    return index != 0;
-  } 
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,11 +18,11 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                        SingleChildScrollView(
                        child:
                        Padding(
-                       padding: EdgeInsets.symmetric(horizontal: 20.0),
+                       padding: EdgeInsets.symmetric(horizontal: 2.w),
                        child:
                        Column(
                         children: [
-                         SizedBox(height: 4.h),
+                         SizedBox(height: 1.h),
                           Container(
                             width: 100.w,
                             height: 25.h,
@@ -67,7 +63,7 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 10,
-                                  fontWeight: FontWeight.bold,                   
+                                                    
                                 ),
                               ),
                               Text(
@@ -75,7 +71,7 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 10,
-                                  fontWeight: FontWeight.bold,                   
+                                                   
                                 ),
                               ),
                               Text(
@@ -83,13 +79,13 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 10,
-                                  fontWeight: FontWeight.bold, 
+                                  
                                 ),
                                  ),
                               SizedBox(height: 2.h),
                                 SizedBox(
                                 height: 5.h,
-                                width: 10.w,
+                                width: 7.w,
                                 child: Image.asset(
                                   'assets/images/Forward Arrow.png',
                                   fit: BoxFit.contain,
@@ -110,7 +106,7 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                           ),
                           ),
               
-                          SizedBox(height: 2.h),
+                          SizedBox(height: 1.h),
                          Container(
                         width: 100.w,
                         height: 25.h,
@@ -151,7 +147,7 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 10,
-                                    fontWeight: FontWeight.bold,         
+                                             
                             ),
                           ),
                           Text(
@@ -159,14 +155,14 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 10,
-                                      fontWeight: FontWeight.bold,       
+                                            
                             ),
                           ),
                         
                           SizedBox(height: 2.h),
                             SizedBox(
                             height: 5.h,
-                            width: 10.w,
+                            width: 7.w,
                             child: Image.asset(
                               'assets/images/Forward Arrow.png',
                               fit: BoxFit.contain,
@@ -186,7 +182,7 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                                 ),
                                 ),
                                 ),
-                         SizedBox(height: 2.h),
+                         SizedBox(height: 1.h),
                          Container(
                         width: 100.w,
                         height: 25.h,
@@ -227,7 +223,7 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 10,
-                                      fontWeight: FontWeight.bold,         
+                                            
                               ),
                             ),
                             Text(
@@ -235,7 +231,7 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 10,
-                                    fontWeight: FontWeight.bold,           
+                                              
                               ),
                                 ),
                                 Text(
@@ -243,7 +239,7 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 10,
-                                    fontWeight: FontWeight.bold, 
+                                    
                                   ),
                                 ),
                                   Text(
@@ -251,13 +247,13 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 10,
-                                    fontWeight: FontWeight.bold, 
+                                    
                                   ),
                                 ),
                                 SizedBox(height: 2.h),
                                   SizedBox(
                                   height: 5.h,
-                                  width: 10.w,
+                                  width: 7.w,
                                   child: Image.asset(
                                     'assets/images/Forward Arrow.png',
                                     fit: BoxFit.contain,
@@ -277,7 +273,7 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                                 ),
                                 ),
                                 ),
-                                SizedBox(height: 2.h),
+                                SizedBox(height: 1.h),
                                 Container(
                                 width: 100.w,
                                 height: 25.h,
@@ -318,7 +314,7 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 10,
-                                                  fontWeight: FontWeight.bold, 
+                                                  
                                     ),
                                   ),
                                   Text(
@@ -326,7 +322,7 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 10,
-                                          fontWeight: FontWeight.bold,          
+                                                
                                     ),
                                   ),
                                   Text(
@@ -334,13 +330,13 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 10,
-                                      fontWeight: FontWeight.bold, 
+                                     
                                     ),
                                   ),
                                 SizedBox(height: 2.h),
                                   SizedBox(
                                   height: 5.h,
-                                  width: 10.w,
+                                  width: 7.w,
                                   child: Image.asset(
                                     'assets/images/Forward Arrow.png',
                                     fit: BoxFit.contain,
@@ -361,143 +357,146 @@ class _CombatHomeViewState extends State<CombatHomeView> {
                                       ),
                                       ),
                                       ),
-                                      SizedBox(height: 2.h),
+                                      SizedBox(height: 4.h),
                                                 ]
                                       ),
+                                      
                                               ),
+                                              
                                               ),
        
     
       
-         bottomNavigationBar: BottomAppBar(
-  color: Colors.white.withOpacity(0.9), 
-  child:   SizedBox(
-  width: 100.w,
-  height: 20.h,
+//          bottomNavigationBar: BottomAppBar(
+//   color: Colors.white.withOpacity(0.9), 
+//   child:   SizedBox(
+//   width: 100.w,
+//   height: 20.h,
   
-                    child:   Stack(
-                        alignment: Alignment.center, 
-      children: [
-      SizedBox(
-  width: 100.w,
-  height: 20.h,
-  child: Image.asset(
-    'assets/images/Container- Task Bar.png',
-    fit: BoxFit.fill,
-  ),
-),
- Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.0,),
-            child:
-        Row(
-          // mainAxisAlignment: MainAxisAlignment.center,
-          // crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-              Padding(
-  padding: EdgeInsets.only(top: 20.0), 
-  child:
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'assets/images/Statistics Icon.png',
-                  width: 28,
-                  height: 28,
-                ),
-                Text('Statistics', style: TextStyle(color: Colors.white, fontSize: 15,),),
-              ],
-            ),
-              ),
-            SizedBox(width: 1.w),
-             Padding(
-  padding: EdgeInsets.only(top: 20.0), 
-  child:
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'assets/images/Location_Pin.png',
-                  width: 28,
-                  height: 28,
-                ),
-                Text('Discover', style: TextStyle(color: Colors.white, fontSize: 15,),),
-              ],
-            ),
-             ),
-            SizedBox(width: 1.w),
-             Padding(
-  padding: EdgeInsets.only(bottom: 0.0), 
-  child:
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Stack(
-                  // alignment: Alignment.center,
-                  children: [
-                    SizedBox(
-                      child: Image.asset(
-                        'assets/images/Base Ellipse.png',
-                        width: 20.w,
-                        height: 10.h,
-                      ),
-                    ),
-                    Positioned(
-                      top: 20,
-                      left: 20,
-                      right: 20,
-                      bottom: 20,
-                      child: SizedBox(
-                        child: Image.asset(
-                          'assets/images/Schedule.png',
-                          width: 60,
-                          height: 60,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-             ),
-            SizedBox(width: 1.w),
-             Padding(
-  padding: EdgeInsets.only(top: 20.0), 
-  child:
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'assets/images/Chat.png',
-                  width: 28,
-                  height: 28,
-                ),
-                Text('Chat', style: TextStyle(color: Colors.white, fontSize: 15,),),
-              ],
-            ),
-             ),
-            SizedBox(width: 1.w),
-             Padding(
-  padding: EdgeInsets.only(top: 20.0), 
-  child:
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'assets/images/Profile.png',
-                  width: 28,
-                  height: 28,
-                ),
-                Text('Profile', style: TextStyle(color: Colors.white, fontSize: 15,),),
-              ],
-            ),
-             ),
-          ],
-        ),
- ),
-      ],
-    ),
-                   ),
-         ),
+//                     child:   Stack(
+//                         alignment: Alignment.center, 
+//       children: [
+//       SizedBox(
+//   width: 100.w,
+//   height: 20.h,
+//   child: Image.asset(
+//     'assets/images/Container- Task Bar.png',
+//     fit: BoxFit.fill,
+//   ),
+// ),
+//  Padding(
+//             padding: EdgeInsets.symmetric(horizontal: 10.0,),
+//             child:
+//         Row(
+//           // mainAxisAlignment: MainAxisAlignment.center,
+//           // crossAxisAlignment: CrossAxisAlignment.center,
+//           children: [
+//               Padding(
+//   padding: EdgeInsets.only(top: 20.0), 
+//   child:
+//             Column(
+//               crossAxisAlignment: CrossAxisAlignment.center,
+//               children: [
+//                 Image.asset(
+//                   'assets/images/Statistics Icon.png',
+//                   width: 28,
+//                   height: 28,
+//                 ),
+//                 Text('Statistics', style: TextStyle(color: Colors.white, fontSize: 15,),),
+//               ],
+//             ),
+//               ),
+//             SizedBox(width: 1.w),
+//              Padding(
+//   padding: EdgeInsets.only(top: 20.0), 
+//   child:
+//             Column(
+//               crossAxisAlignment: CrossAxisAlignment.center,
+//               children: [
+//                 Image.asset(
+//                   'assets/images/Location_Pin.png',
+//                   width: 28,
+//                   height: 28,
+//                 ),
+//                 Text('Discover', style: TextStyle(color: Colors.white, fontSize: 15,),),
+//               ],
+//             ),
+//              ),
+//             SizedBox(width: 1.w),
+//              Padding(
+//   padding: EdgeInsets.only(bottom: 0.0), 
+//   child:
+//             Column(
+//               crossAxisAlignment: CrossAxisAlignment.center,
+//               children: [
+//                 Stack(
+//                   // alignment: Alignment.center,
+//                   children: [
+//                     SizedBox(
+//                       child: Image.asset(
+//                         'assets/images/Base Ellipse.png',
+//                         width: 20.w,
+//                         height: 10.h,
+//                       ),
+//                     ),
+//                     Positioned(
+//                       top: 20,
+//                       left: 20,
+//                       right: 20,
+//                       bottom: 20,
+//                       child: SizedBox(
+//                         child: Image.asset(
+//                           'assets/images/Schedule.png',
+//                           width: 60,
+//                           height: 60,
+//                         ),
+//                       ),
+//                     ),
+//                   ],
+//                 ),
+//               ],
+//             ),
+//              ),
+//             SizedBox(width: 1.w),
+//              Padding(
+//   padding: EdgeInsets.only(top: 20.0), 
+//   child:
+//             Column(
+//               crossAxisAlignment: CrossAxisAlignment.center,
+//               children: [
+//                 Image.asset(
+//                   'assets/images/Chat.png',
+//                   width: 28,
+//                   height: 28,
+//                 ),
+//                 Text('Chat', style: TextStyle(color: Colors.white, fontSize: 15,),),
+//               ],
+//             ),
+//              ),
+//             SizedBox(width: 1.w),
+//              Padding(
+//   padding: EdgeInsets.only(top: 20.0), 
+//   child:
+//             Column(
+//               crossAxisAlignment: CrossAxisAlignment.center,
+//               children: [
+//                 Image.asset(
+//                   'assets/images/Profile.png',
+//                   width: 28,
+//                   height: 28,
+//                 ),
+//                 Text('Profile', style: TextStyle(color: Colors.white, fontSize: 15,),),
+//               ],
+//             ),
+//              ),
+//           ],
+//         ),
+//  ),
+//       ],
+//     ),
+//                    ),
+//          ),
+
     );
   }
 }

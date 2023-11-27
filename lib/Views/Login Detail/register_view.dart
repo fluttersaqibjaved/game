@@ -113,7 +113,7 @@ class _RegisterViewState extends State<RegisterView> {
               labelText: 'Full Name',
             ),
            inputFormatters: <TextInputFormatter>[
-  FilteringTextInputFormatter.allow(RegExp(r'[a-z0-9]')),
+  FilteringTextInputFormatter.allow(RegExp(r'[a-z]')),
 ],
 
           ),

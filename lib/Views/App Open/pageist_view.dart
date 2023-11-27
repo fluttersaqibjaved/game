@@ -22,7 +22,7 @@ class _PageistViewState extends State<PageistView> {
             color: Color(0xF4F8FB),
             ),
              Padding(
-  padding: EdgeInsets.only(top: 140.0), 
+  padding: EdgeInsets.only(top: 120.0), 
   child: Center(
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,

@@ -22,7 +22,7 @@ class _PagendViewState extends State<PagendView> {
             color: Color(0xF4F8FB),
             ),
              Padding(
-  padding: EdgeInsets.only(top: 150.0), 
+  padding: EdgeInsets.only(top: 120.0), 
   child: Center(
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,

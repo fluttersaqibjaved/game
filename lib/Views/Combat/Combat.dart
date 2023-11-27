@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gametime/Views/App%20Open/game_view.dart';
 import 'package:gametime/Views/Combat/Combathome_view.dart';
+import 'package:gametime/Views/Combat/Drawer/drawer_view.dart';
 import 'package:gametime/Views/Login%20Detail/acccount_view.dart';
 import 'package:gametime/Views/Mobile%20Number/mobilenumber_view.dart';
 import 'package:gametime/Views/splashscreen_view.dart';
@@ -66,9 +67,13 @@ int _currentIndex = 0;
           children: [
              GestureDetector(
                 onTap: () {
-                   _scaffoldKey.currentState?.openDrawer();
+                    Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => DrawerView()),
+            );
                 },
                 child:
+                
             Image.asset(
               'assets/images/Hamburger.png',
               fit: BoxFit.fitWidth,
@@ -78,11 +83,25 @@ int _currentIndex = 0;
             SizedBox(width: 5.0.w),
             Row(
               children: [
-                Image.asset(
+                Container(
+            width: 40, 
+            height: 40, 
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: Colors.red, 
+                width: 1.0, 
+              ),
+            ),
+            child: Center(
+             child:  Image.asset(
                   'assets/images/Ellipse.png',
                   fit: BoxFit.fitWidth,
                   width: 8.0.w,
                 ),
+            ),
+          ),
+               
                 SizedBox(width: 2.0.w),
                 Text(
                   'Stone Stellar',
@@ -210,10 +229,23 @@ int _currentIndex = 0;
             ),
             borderRadius: BorderRadius.circular(100),
           ),
-          child:  Image.asset(
+          child:  Container(
+            width: 50, 
+            height: 50, 
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: Colors.white, 
+                width: 3.0, 
+              ),
+            ),
+            child: Center(
+             child:  Image.asset(
             'assets/images/Schedule.png',
             width: 34,
             height: 34,
+          ),
+            ),
           ),
         ),
       ),
