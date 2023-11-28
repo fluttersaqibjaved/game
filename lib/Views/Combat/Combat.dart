@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:gametime/Views/App%20Open/game_view.dart';
 import 'package:gametime/Views/Combat/Combathome_view.dart';
-import 'package:gametime/Views/Combat/Drawer/drawer_view.dart';
-import 'package:gametime/Views/Login%20Detail/acccount_view.dart';
-import 'package:gametime/Views/Mobile%20Number/mobilenumber_view.dart';
-import 'package:gametime/Views/splashscreen_view.dart';
+import 'package:gametime/Views/Combat/Drawer/Chat_view.dart';
+import 'package:gametime/Views/Combat/Drawer/Discover_view.dart';
+import 'package:gametime/Views/Combat/Drawer/Profile_view.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:sizer/sizer.dart';
+
 
 class Combat extends StatefulWidget {
   const Combat({super.key});
@@ -42,10 +40,10 @@ int _currentIndex = 0;
 
   final List<Widget> _pages = [
     CombatHomeView(),
-    GameView(),
-    AccountView(),
-    MobileNumberView(),
-    SplashScreenView(),
+    DiscoverView(),
+    ChatView(),
+    ProfileView(),
+    
   ];
 
   bool shouldShowAppBar(int index) {
@@ -57,69 +55,11 @@ int _currentIndex = 0;
   Widget build(BuildContext context) {
    return Scaffold(
        key: _scaffoldKey,
-       appBar: AppBar(
-      backgroundColor: Colors.white,
-      automaticallyImplyLeading: false, 
-      title: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-             GestureDetector(
-                onTap: () {
-                    Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => DrawerView()),
-            );
-                },
-                child:
-                
-            Image.asset(
-              'assets/images/Hamburger.png',
-              fit: BoxFit.fitWidth,
-              width: 8.0.w,
-            ),
-             ),
-            SizedBox(width: 5.0.w),
-            Row(
-              children: [
-                Container(
-            width: 40, 
-            height: 40, 
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(
-                color: Colors.red, 
-                width: 1.0, 
-              ),
-            ),
-            child: Center(
-             child:  Image.asset(
-                  'assets/images/Ellipse.png',
-                  fit: BoxFit.fitWidth,
-                  width: 8.0.w,
-                ),
-            ),
-          ),
-               
-                SizedBox(width: 2.0.w),
-                Text(
-                  'Stone Stellar',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 8.sp,
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    ),
+      
     body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
   type: BottomNavigationBarType.fixed,
-  selectedItemColor: Colors.yellow,
+  selectedItemColor: Colors.white,
   unselectedItemColor: Colors.white,
   selectedFontSize: 15,
   unselectedFontSize: 15,
@@ -127,7 +67,7 @@ int _currentIndex = 0;
     fontWeight: FontWeight.bold,
   ),
   unselectedLabelStyle: TextStyle(
-    fontWeight: FontWeight.bold,
+    
   ),
   backgroundColor: Color(0xFFFF3F81),
   currentIndex: _currentIndex,
@@ -142,7 +82,7 @@ int _currentIndex = 0;
         padding: EdgeInsets.zero,
         child: Image.asset(
           'assets/images/Statistics Icon.png',
-          width: 24, // Adjust width and height as needed
+          width: 24, 
           height: 24,
         ),
       ),
@@ -236,7 +176,7 @@ int _currentIndex = 0;
               shape: BoxShape.circle,
               border: Border.all(
                 color: Colors.white, 
-                width: 3.0, 
+                width: 4.0, 
               ),
             ),
             child: Center(

@@ -10,6 +10,8 @@ class AppSkinView extends StatefulWidget {
 class _AppSkinViewState extends State<AppSkinView> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      
+    );
   }
 }

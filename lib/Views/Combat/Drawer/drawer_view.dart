@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:gametime/Views/Combat/Drawer/Appskin_view.dart';
+import 'package:gametime/Views/Combat/Drawer/Chat_view.dart';
+import 'package:gametime/Views/Combat/Drawer/Discover_view.dart';
+import 'package:gametime/Views/Combat/Drawer/Language_view.dart';
 import 'package:gametime/Views/Combat/Drawer/Profile_view.dart';
 import 'package:gametime/Views/Combat/Drawer/Schedule_view.dart';
+import 'package:gametime/Views/Combat/Drawer/Statistics_view.dart';
 import 'package:gametime/Views/Login%20Detail/login_view.dart';
 import 'package:sizer/sizer.dart';
 
@@ -27,7 +32,7 @@ class _DrawerViewState extends State<DrawerView> {
           padding: EdgeInsets.only(left: 290.0), 
           child:   GestureDetector(
             onTap: () {
-              Navigator.of(context).pop(); // Navigate back to the previous screen
+              Navigator.of(context).pop(); 
             },
             child:
             Image.asset(
@@ -159,7 +164,11 @@ class _DrawerViewState extends State<DrawerView> {
                           SizedBox(width: 8.w),
                             TextButton(
                             onPressed: () {
-                              
+                                Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => StatisticsView(),
+                            ),
+                          );
                             },
                            child: 
                           Text(
@@ -183,7 +192,11 @@ class _DrawerViewState extends State<DrawerView> {
                           SizedBox(width: 8.w),
                             TextButton(
                             onPressed: () {
-                              
+                                Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => DiscoverView(),
+                            ),
+                          );
                             },
                            child: 
                           Text(
@@ -207,7 +220,11 @@ class _DrawerViewState extends State<DrawerView> {
                           SizedBox(width: 8.w),
                             TextButton(
                             onPressed: () {
-                              
+                                Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => ChatView(),
+                            ),
+                          );
                             },
                            child: 
                           Text(
@@ -231,7 +248,11 @@ class _DrawerViewState extends State<DrawerView> {
                           SizedBox(width: 8.w),
                             TextButton(
                             onPressed: () {
-                              
+                                Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => LanguageView(),
+                            ),
+                          );
                             },
                            child: 
                           Text(
@@ -255,6 +276,11 @@ class _DrawerViewState extends State<DrawerView> {
                           SizedBox(width: 8.w),
                             TextButton(
                             onPressed: () {
+                                Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => AppSkinView(),
+                            ),
+                          );
                     },
                            child: 
                           Text(

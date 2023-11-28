@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gametime/Views/Combat/Drawer/drawer_view.dart';
 import 'package:sizer/sizer.dart';
 
 class CombatHomeView extends StatefulWidget {
@@ -14,6 +15,64 @@ class _CombatHomeViewState extends State<CombatHomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       appBar: AppBar(
+      backgroundColor: Colors.white,
+      automaticallyImplyLeading: false, 
+      title: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+             GestureDetector(
+                onTap: () {
+                    Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => DrawerView()),
+            );
+                },
+                child:
+            Image.asset(
+              'assets/images/Hamburger.png',
+              fit: BoxFit.fitWidth,
+              width: 8.0.w,
+            ),
+             ),
+            SizedBox(width: 5.0.w),
+            Row(
+              children: [
+                Container(
+            width: 40, 
+            height: 40, 
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: Colors.red, 
+                width: 1.0, 
+              ),
+            ),
+            child: Center(
+             child:  Image.asset(
+                  'assets/images/Ellipse.png',
+                  fit: BoxFit.fitWidth,
+                  width: 8.0.w,
+                ),
+            ),
+          ),
+               
+                SizedBox(width: 2.0.w),
+                Text(
+                  'Stone Stellar',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 8.sp,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    ),
          body: 
                        SingleChildScrollView(
                        child:

@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:gametime/Views/Combat/Drawer/Statistics_view.dart';
 import 'package:sizer/sizer.dart';
 
 class ScheduleView extends StatefulWidget {
@@ -12,8 +15,9 @@ class _ScheduleViewState extends State<ScheduleView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body:    Padding(
-  padding: EdgeInsets.only(top: 20.0),
+        body:   SingleChildScrollView(
+                child: Padding(
+  padding: EdgeInsets.only(top: 40.0),
   child:
                      Column(
                        children: [
@@ -25,11 +29,11 @@ class _ScheduleViewState extends State<ScheduleView> {
                             children: [
                               GestureDetector(
             onTap: () {
-              Navigator.of(context).pop(); 
+              Navigator.of(context).pop();  
             },
             child: SizedBox(
-              height: 50,
-              width: 50,
+              height: 30,
+              width: 30,
               child: Image.asset(
                 'assets/images/Frame 9.png',
                 fit: BoxFit.contain,
@@ -350,21 +354,33 @@ class _ScheduleViewState extends State<ScheduleView> {
                                      Row(
                                        mainAxisAlignment: MainAxisAlignment.center,
                                        children: [
-                                         TextButton(
-                            onPressed: () async {   
-                            },
-                                 child: Container(
-                                  alignment: Alignment.center,
-                                  width: 50.w,
-                                  height: 7.h,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(25.0),
-                                    color: Colors.pinkAccent,
-                                  ),
-                                  child: Text('Publish',
-                                      style: TextStyle(color: Colors.white, fontSize: 20)),
-                                ),
-                               ),
+                                    TextButton(
+                                      onPressed: () async {
+                                        Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                            builder: (context) {
+                                              return BackdropFilter(
+                                                filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                                                child: StatisticsView(),
+                                              );
+                                            },
+                                          ),
+                                        );
+                                      },
+                                      child: Container(
+                                        alignment: Alignment.center,
+                                        width: 50.w,
+                                        height: 7.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(25.0),
+                                          color: Color(0xFFFF3F81),
+                                        ),
+                                        child: Text(
+                                          'Publish',
+                                          style: TextStyle(color: Colors.white, fontSize: 20),
+                                        ),
+                                      ),
+                                    ),
                                        ],
                                      ),
                             ]
@@ -372,6 +388,7 @@ class _ScheduleViewState extends State<ScheduleView> {
                          ),
                        ],
                      ),
+        ),
         ),
     );
   }
