@@ -3,128 +3,123 @@ import 'package:gametime/Views/Combat/Combathome_view.dart';
 import 'package:gametime/Views/Combat/Drawer/Chat_view.dart';
 import 'package:gametime/Views/Combat/Drawer/Discover_view.dart';
 import 'package:gametime/Views/Combat/Drawer/Profile_view.dart';
+import 'package:gametime/Views/Combat/Drawer/Statistics_view.dart';
 import 'package:image_picker/image_picker.dart';
 
-
 class Combat extends StatefulWidget {
-  const Combat({super.key});
+  const Combat({Key? key}) : super(key: key);
 
   @override
   State<Combat> createState() => _CombatState();
 }
 
 class _CombatState extends State<Combat> {
+  
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
-final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-Future<void> _openCamera() async {
-    final XFile? image = await ImagePicker().pickImage(
-      source: ImageSource.camera,
-      imageQuality: 50,
-    );
+  PageController _pageController = PageController(initialPage: 0); 
+  int _currentIndex = 1; 
 
-    if (image != null) {
-      print("Image path: ${image.path}");
-    }
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
   }
-  Future<void> _openGallery() async {
-    final XFile? image = await ImagePicker().pickImage(
-      source: ImageSource.gallery,
-      imageQuality: 50,
-    );
 
-    if (image != null) {
-      print("Image path: ${image.path}");
-    }
+   void _onPageChanged(int index) {
+    setState(() {
+      if (index != 0) {
+        _currentIndex = index;
+      } else {
+        _pageController.jumpToPage(_currentIndex);
+      }
+    });
   }
-int _currentIndex = 0;
-
-  final List<Widget> _pages = [
-    CombatHomeView(),
-    DiscoverView(),
-    ChatView(),
-    ProfileView(),
-    
-  ];
-
-  bool shouldShowAppBar(int index) {
-    return index != 0;
-  }
-    
 
   @override
   Widget build(BuildContext context) {
-   return Scaffold(
-       key: _scaffoldKey,
-      
-    body: _pages[_currentIndex],
+    return Scaffold(
+      key: _scaffoldKey,
+      body: PageView(
+        controller: _pageController,
+        onPageChanged: _onPageChanged,
+        children: [
+           CombatHomeView(),
+          StatisticsView(),
+          DiscoverView(),
+          ChatView(),
+          ProfileView(),
+        ],
+      ),
       bottomNavigationBar: BottomNavigationBar(
-  type: BottomNavigationBarType.fixed,
-  selectedItemColor: Colors.white,
-  unselectedItemColor: Colors.white,
-  selectedFontSize: 15,
-  unselectedFontSize: 15,
-  selectedLabelStyle: TextStyle(
-    fontWeight: FontWeight.bold,
-  ),
-  unselectedLabelStyle: TextStyle(
-    
-  ),
-  backgroundColor: Color(0xFFFF3F81),
-  currentIndex: _currentIndex,
-  onTap: (index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  },
-  items: [
-    BottomNavigationBarItem(
-      icon: Padding(
-        padding: EdgeInsets.zero,
-        child: Image.asset(
-          'assets/images/Statistics Icon.png',
-          width: 24, 
-          height: 24,
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white,
+        selectedFontSize: 15,
+        unselectedFontSize: 15,
+        selectedLabelStyle: TextStyle(
+          fontWeight: FontWeight.bold,
         ),
+        backgroundColor: Color(0xFFFF3F81),
+        currentIndex: _currentIndex,
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+            _pageController.animateToPage(
+              index,
+              duration: Duration(milliseconds: 300),
+              curve: Curves.ease,
+            );
+          });
+        },
+        items: [
+          BottomNavigationBarItem(
+            icon: Padding(
+              padding: EdgeInsets.zero,
+              child: Image.asset(
+                'assets/images/Statistics Icon.png',
+                width: 24,
+                height: 24,
+              ),
+            ),
+            label: 'Statistics',
+          ),
+          BottomNavigationBarItem(
+            icon: Padding(
+              padding: EdgeInsets.zero,
+              child: Image.asset(
+                'assets/images/Location_Pin.png',
+                width: 24,
+                height: 24,
+              ),
+            ),
+            label: 'Discover',
+          ),
+          BottomNavigationBarItem(
+            icon: Padding(
+              padding: EdgeInsets.zero,
+              child: Image.asset(
+                'assets/images/Chat.png',
+                width: 24,
+                height: 24,
+              ),
+            ),
+            label: 'Chat',
+          ),
+          BottomNavigationBarItem(
+            icon: Padding(
+              padding: EdgeInsets.zero,
+              child: Image.asset(
+                'assets/images/Profile.png',
+                width: 24,
+                height: 24,
+              ),
+            ),
+            label: 'Profile',
+          ),
+        ],
       ),
-      label: 'Statistics',
-    ),
-    BottomNavigationBarItem(
-      icon: Padding(
-        padding: EdgeInsets.zero,
-        child: Image.asset(
-          'assets/images/Location_Pin.png',
-          width: 24,
-          height: 24,
-        ),
-      ),
-      label: 'Discover',
-    ),
-    BottomNavigationBarItem(
-      icon: Padding(
-        padding: EdgeInsets.zero,
-        child: Image.asset(
-          'assets/images/Chat.png',
-          width: 24,
-          height: 24,
-        ),
-      ),
-      label: 'Chat',
-    ),
-    BottomNavigationBarItem(
-      icon: Padding(
-        padding: EdgeInsets.zero,
-        child: Image.asset(
-          'assets/images/Profile.png',
-          width: 24,
-          height: 24,
-        ),
-      ),
-      label: 'Profile',
-    ),
-  ],
-),
-
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Container(
         margin: const EdgeInsets.only(top: 10),
         height: 64,
@@ -145,7 +140,7 @@ int _currentIndex = 0;
                         title: Text('Camera'),
                         onTap: () {
                           Navigator.pop(context);
-                          _openCamera(); 
+                          _openCamera();
                         },
                       ),
                       ListTile(
@@ -153,7 +148,7 @@ int _currentIndex = 0;
                         title: Text('Gallery'),
                         onTap: () {
                           Navigator.pop(context);
-                          _openGallery(); 
+                          _openGallery();
                         },
                       ),
                     ],
@@ -169,27 +164,48 @@ int _currentIndex = 0;
             ),
             borderRadius: BorderRadius.circular(100),
           ),
-          child:  Container(
-            width: 50, 
-            height: 50, 
+          child: Container(
+            width: 50,
+            height: 50,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(
-                color: Colors.white, 
-                width: 4.0, 
+                color: Colors.white,
+                width: 4.0,
               ),
             ),
             child: Center(
-             child:  Image.asset(
-            'assets/images/Schedule.png',
-            width: 34,
-            height: 34,
-          ),
+              child: Image.asset(
+                'assets/images/Schedule.png',
+                width: 34,
+                height: 34,
+              ),
             ),
           ),
         ),
       ),
-
     );
+  }
+
+  Future<void> _openCamera() async {
+    final XFile? image = await ImagePicker().pickImage(
+      source: ImageSource.camera,
+      imageQuality: 50,
+    );
+
+    if (image != null) {
+      print("Image path: ${image.path}");
+    }
+  }
+
+  Future<void> _openGallery() async {
+    final XFile? image = await ImagePicker().pickImage(
+      source: ImageSource.gallery,
+      imageQuality: 50,
+    );
+
+    if (image != null) {
+      print("Image path: ${image.path}");
+    }
   }
 }

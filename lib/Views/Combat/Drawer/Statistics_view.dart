@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gametime/Views/Message/stonestellar_view.dart';
 import 'package:sizer/sizer.dart';
 
 class StatisticsView extends StatefulWidget {
@@ -94,6 +95,11 @@ class _StatisticsViewState extends State<StatisticsView> {
          SizedBox(height: 4.h),
                             TextButton(
                             onPressed: () async {   
+                               Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => StoneStellarView(),
+                            ),
+                          );
                             },
                                  child: Container(
                                   alignment: Alignment.center,
