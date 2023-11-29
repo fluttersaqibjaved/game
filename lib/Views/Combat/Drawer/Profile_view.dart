@@ -11,12 +11,20 @@ class _ProfileViewState extends State<ProfileView> {
   String currentDate = '';
   double containerWidth = 100.0;
   double containerHeight = 100.0;
-  bool showContainer = false; 
+  bool showContainer = false;
+  
+  void _updateDateTime() {
+    setState(() {
+      currentTime = DateTime.now().toString();
+      currentDate = DateTime.now().toLocal().toString();
+      showContainer = true; 
+      enteredText = enteredText; 
+    });
+  } 
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return  Scaffold(
         appBar: AppBar(
           title: Text('Variable Example'),
         ),
@@ -73,7 +81,7 @@ class _ProfileViewState extends State<ProfileView> {
                   Container(
                     width: containerWidth,
                     height: containerHeight,
-                    color: Colors.blue,
+                    color: Colors.pink,
                     child: Center(
                       child: Text(
                         enteredText,
@@ -85,19 +93,15 @@ class _ProfileViewState extends State<ProfileView> {
               ),
             SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: _updateDateTime,
+              onPressed: () {
+                if (enteredText.isNotEmpty) {
+                  _updateDateTime();
+                }
+              },
               child: Text('Send'),
             ),
           ],
         ),
-      ),
-    );
-  }
-  void _updateDateTime() {
-    setState(() {
-      currentTime = DateTime.now().toString();
-      currentDate = DateTime.now().toLocal().toString();
-      showContainer = true; // Show container and time/date
-    });
+      );
   }
 }
