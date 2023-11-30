@@ -26,8 +26,8 @@ class _AccountViewState extends State<AccountView> {
                 });
               },
               children: [
-                RegisterView(),
                 LoginView(),
+                RegisterView(),
  
               ],
             ),

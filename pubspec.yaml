@@ -42,7 +42,10 @@ dependencies:
   pin_code_fields: ^8.0.1
   intl_phone_field: ^3.2.0
   intl_phone_number_input: ^0.7.3+1
-  image_picker: ^0.8.4+4
+  image_picker: ^1.0.4
+  emoji_picker_flutter: ^1.6.3
+  flutter_sound: ^9.2.13
+  
   
   
   

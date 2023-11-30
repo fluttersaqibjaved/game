@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gametime/Views/Message/stonestellar_view.dart';
 import 'package:sizer/sizer.dart';
 
 class ChatView extends StatefulWidget {
@@ -96,6 +97,15 @@ focusedBorder: UnderlineInputBorder(
   ],
 ),     
                                 SizedBox(height: 2.h),
+                                GestureDetector(
+        onTap: () {
+          
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => StoneStellarView()),
+          );
+        },
+        child: 
                                    Dismissible(
   key: UniqueKey(), 
   onDismissed: (DismissDirection direction) {
@@ -175,6 +185,7 @@ focusedBorder: UnderlineInputBorder(
                                 ],
                               ),
                                    ),
+                                ),
                               SizedBox(height: 2.h),
                               Divider(
                               color: Colors.pink,

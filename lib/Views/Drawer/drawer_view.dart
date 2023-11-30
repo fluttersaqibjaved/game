@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:gametime/Views/Combat/Drawer/Appskin_view.dart';
-import 'package:gametime/Views/Combat/Drawer/Chat_view.dart';
-import 'package:gametime/Views/Combat/Drawer/Discover_view.dart';
-import 'package:gametime/Views/Combat/Drawer/Language_view.dart';
-import 'package:gametime/Views/Combat/Drawer/Profile_view.dart';
-import 'package:gametime/Views/Combat/Drawer/Schedule_view.dart';
-import 'package:gametime/Views/Combat/Drawer/Statistics_view.dart';
+import 'package:gametime/Views/Drawer/Appskin_view.dart';
+import 'package:gametime/Views/Drawer/Chat_view.dart';
+import 'package:gametime/Views/Drawer/Discover_view.dart';
+import 'package:gametime/Views/Drawer/Language_view.dart';
+import 'package:gametime/Views/Drawer/Profile_view.dart';
+import 'package:gametime/Views/Drawer/Schedule_view.dart';
+import 'package:gametime/Views/Drawer/Statistics_view.dart';
 import 'package:gametime/Views/Login%20Detail/login_view.dart';
 import 'package:sizer/sizer.dart';
 

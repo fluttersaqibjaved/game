@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gametime/Views/Combat/Drawer/drawer_view.dart';
+import 'package:gametime/Views/Drawer/drawer_view.dart';
 import 'package:sizer/sizer.dart';
 
 class CombatHomeView extends StatefulWidget {

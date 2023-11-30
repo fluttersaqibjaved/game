@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:gametime/Views/Combat/Drawer/Statistics_view.dart';
+import 'package:gametime/Views/Drawer/Statistics_view.dart';
 import 'package:sizer/sizer.dart';
 
 class ScheduleView extends StatefulWidget {

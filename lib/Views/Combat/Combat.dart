@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gametime/Views/Combat/Combathome_view.dart';
-import 'package:gametime/Views/Combat/Drawer/Chat_view.dart';
-import 'package:gametime/Views/Combat/Drawer/Discover_view.dart';
-import 'package:gametime/Views/Combat/Drawer/Profile_view.dart';
-import 'package:gametime/Views/Combat/Drawer/Statistics_view.dart';
+import 'package:gametime/Views/Drawer/Chat_view.dart';
+import 'package:gametime/Views/Drawer/Discover_view.dart';
+import 'package:gametime/Views/Drawer/Profile_view.dart';
+import 'package:gametime/Views/Drawer/Statistics_view.dart';
 import 'package:image_picker/image_picker.dart';
+
 
 class Combat extends StatefulWidget {
   const Combat({Key? key}) : super(key: key);

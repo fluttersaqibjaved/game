@@ -23,7 +23,8 @@ TextEditingController _emailController = TextEditingController();
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: null,
-      body:  Stack(
+      body: SingleChildScrollView(child: 
+        Stack(
           children: [
             Container(
               width: 100.w,
@@ -130,6 +131,7 @@ TextEditingController _emailController = TextEditingController();
       ),
               ),
           ]
+      ),
       ),
     );
   }
