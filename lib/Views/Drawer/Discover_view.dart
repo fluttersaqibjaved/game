@@ -9,6 +9,7 @@ class DiscoverView extends StatefulWidget {
 }
 
 class _DiscoverViewState extends State<DiscoverView> {
+  
    bool isEmojiPickerVisible = false;
   TextEditingController _textEditingController = TextEditingController();
   bool isTextFieldEmpty = true;
@@ -47,6 +48,7 @@ Future<void> _openCamera() async {
   void initState() {
     super.initState();
     _textEditingController.addListener(_textFieldListener);
+     
   }
 
   void _textFieldListener() {
@@ -60,6 +62,9 @@ Future<void> _openCamera() async {
     _textEditingController.dispose();
     super.dispose();
   }
+
+  
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -312,37 +317,44 @@ Future<void> _openCamera() async {
                       ),
                     ):
                   SizedBox(width: 3.w),
-                  GestureDetector(
-                    onTap: () {
-                      if (isTextFieldEmpty) {
-                        
-                        print('Microphone icon tapped!');
-                      } else {
-                        
-                        print('Message sent!');
-                      }
-                    },
-                    child: Container(
-                      padding: EdgeInsets.all(8.0),
-                      decoration: BoxDecoration(
-                        color: isTextFieldEmpty ? Colors.green : Colors.green,
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.1),
-                            spreadRadius: 2,
-                            blurRadius: 3,
-                            offset: Offset(0, 2),
-                          ),
-                        ],
-                      ),
-                      child: Icon(
-                        isTextFieldEmpty ? Icons.mic : Icons.send,
-                        color: Colors.white,
-                        size: 28.0,
-                      ),
-                    ),
-                  ),
+              Container(
+    padding: EdgeInsets.all(2.0),
+    decoration: BoxDecoration(
+      color: isTextFieldEmpty ? Colors.green : Colors.green,
+      shape: BoxShape.circle,
+      boxShadow: [
+        BoxShadow(
+          color: Colors.black.withOpacity(0.1),
+          
+          offset: Offset(0, 2),
+        ),
+      ],
+    ),
+    child:TextButton(
+  onPressed: () {
+    if (isTextFieldEmpty) {
+      print('Recording started!');
+    } else {
+      print('Message sent!');
+    }
+  },
+  child: Row(
+    mainAxisSize: MainAxisSize.min, 
+    children: [
+      Icon(
+        isTextFieldEmpty ? Icons.mic : Icons.send, 
+        color: Colors.white,
+      ),
+      
+    
+    ],
+  ),
+),
+
+  ),
+
+              
+                  
                 ],
               ),
               
