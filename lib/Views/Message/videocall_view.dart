@@ -24,7 +24,7 @@ class _VideoCallViewState extends State<VideoCallView> {
              Text(
           'incoming video call...',
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.white.withOpacity(0.5),
             fontSize: 16,
             
           ),

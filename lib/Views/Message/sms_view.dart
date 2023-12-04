@@ -210,6 +210,9 @@ class _SmsViewState extends State<SmsView> {
                                                                         child: 
                                                                                                 Row(
                                                                                                   children: [
+                                                                                                      Padding(
+    padding: EdgeInsets.only(top: 90.0),
+    child:
                                                                                                     SizedBox(
                                                                                                               height: 10.h,
                                                                                                               width: 10.w,
@@ -218,6 +221,7 @@ class _SmsViewState extends State<SmsView> {
                                                                                                                 fit: BoxFit.contain,
                                                                                                               ),
                                                                                                             ),
+                                                                                                      ),
                                                                                                       Container(
                                                                                                     width: 70.w,
                                                                                                     height: 15.h,
@@ -436,8 +440,11 @@ class _SmsViewState extends State<SmsView> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
+                                        Padding(
+    padding: EdgeInsets.only(top: 100.0),
+    child:
                                       Column(
-                                        mainAxisAlignment: MainAxisAlignment.end,
+                                        
                                         children: [
                                           SizedBox(
                                                     height: 10.h,
@@ -449,6 +456,7 @@ class _SmsViewState extends State<SmsView> {
                                                   ),
                                         ],
                                       ),
+                                        ),
                                               SizedBox(width: 5.w),
                                                Container(
                                 width: 60.w,

@@ -120,71 +120,66 @@ class _CombatState extends State<Combat> {
           ),
         ],
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: Container(
-        margin: const EdgeInsets.only(top: 10),
-        height: 64,
-        width: 64,
-        child: FloatingActionButton(
-          backgroundColor: Color(0xFFFF3F81),
-          elevation: 0,
-          onPressed: () {
-            showModalBottomSheet(
-              context: context,
-              builder: (BuildContext context) {
-                return Container(
-                  height: 150,
-                  child: Column(
-                    children: <Widget>[
-                      ListTile(
-                        leading: Icon(Icons.camera),
-                        title: Text('Camera'),
-                        onTap: () {
-                          Navigator.pop(context);
-                          _openCamera();
-                        },
-                      ),
-                      ListTile(
-                        leading: Icon(Icons.image),
-                        title: Text('Gallery'),
-                        onTap: () {
-                          Navigator.pop(context);
-                          _openGallery();
-                        },
-                      ),
-                    ],
+       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+    floatingActionButton: FloatingActionButton(
+      backgroundColor: Color(0xFFFF3F81),
+      elevation: 0,
+      onPressed: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (BuildContext context) {
+            return Container(
+              height: 150,
+              child: Column(
+                children: <Widget>[
+                  ListTile(
+                    leading: Icon(Icons.camera),
+                    title: Text('Camera'),
+                    onTap: () {
+                      Navigator.pop(context);
+                      _openCamera();
+                    },
                   ),
-                );
-              },
+                  ListTile(
+                    leading: Icon(Icons.image),
+                    title: Text('Gallery'),
+                    onTap: () {
+                      Navigator.pop(context);
+                      _openGallery();
+                    },
+                  ),
+                ],
+              ),
             );
           },
-          shape: RoundedRectangleBorder(
-            side: const BorderSide(
-              width: 3,
-              color: Color(0xFFFF3F81),
-            ),
-            borderRadius: BorderRadius.circular(100),
+        );
+      },
+      shape: RoundedRectangleBorder(
+        side: const BorderSide(
+          width: 3,
+          color: Color(0xFFFF3F81),
+        ),
+        borderRadius: BorderRadius.circular(100),
+      ),
+      child: Container(
+        width: 50,
+        height: 50,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          border: Border.all(
+            color: Colors.white,
+            width: 4.0,
           ),
-          child: Container(
-            width: 50,
-            height: 50,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(
-                color: Colors.white,
-                width: 4.0,
-              ),
-            ),
-            child: Center(
-              child: Image.asset(
-                'assets/images/Schedule.png',
-                width: 34,
-                height: 34,
-              ),
-            ),
+        ),
+        child: Center(
+          child: Image.asset(
+            'assets/images/Schedule.png',
+            width: 34,
+            height: 34,
           ),
         ),
       ),
+    ),
     );
   }
 

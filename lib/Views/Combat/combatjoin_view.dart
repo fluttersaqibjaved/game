@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-class StatisticsView extends StatefulWidget {
-  const StatisticsView({super.key});
+class CombatJoinView extends StatefulWidget {
+  const CombatJoinView({super.key});
 
   @override
-  State<StatisticsView> createState() => _StatisticsViewState();
+  State<CombatJoinView> createState() => _CombatJoinViewState();
 }
 
-class _StatisticsViewState extends State<StatisticsView> {
+class _CombatJoinViewState extends State<CombatJoinView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+     return Scaffold(
       appBar: null,
       body:   Stack(
                children: [
@@ -50,7 +50,7 @@ class _StatisticsViewState extends State<StatisticsView> {
         ),
         SizedBox(height: 3.h),
             Text(
-          'Published',
+          'Successfully',
           style: TextStyle(
             color: Colors.white,
             fontSize: 30,
@@ -59,7 +59,7 @@ class _StatisticsViewState extends State<StatisticsView> {
         ),
         
         Text(
-          'Successful',
+          'Join Combat',
           style: TextStyle(
             color: Colors.white,
             fontSize: 30,
@@ -68,7 +68,7 @@ class _StatisticsViewState extends State<StatisticsView> {
         ),
          SizedBox(height: 4.h),
         Text(
-          'Wanna change/edit your',
+          'Wanna know more',
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
@@ -76,7 +76,7 @@ class _StatisticsViewState extends State<StatisticsView> {
           ),
         ),
         Text(
-          'scheduled game before it',
+          'information bout this',
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
@@ -84,7 +84,7 @@ class _StatisticsViewState extends State<StatisticsView> {
           ),
         ),
         Text(
-          'begins?',
+          'competition?',
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
@@ -94,11 +94,7 @@ class _StatisticsViewState extends State<StatisticsView> {
          SizedBox(height: 4.h),
                             TextButton(
                             onPressed: () async {   
-                          //      Navigator.of(context).push(
-                          //   MaterialPageRoute(
-                          //     builder: (context) => DiscoverCombatView(),
-                          //   ),
-                          // );
+                            
                             },
                                  child: Container(
                                   alignment: Alignment.center,
@@ -116,7 +112,7 @@ class _StatisticsViewState extends State<StatisticsView> {
                                     ),
                                   ],
                                   ),
-                                  child: Text('Statistics',
+                                  child: Text('Proceed to Chat',
                                       style: TextStyle(color: Colors.white, fontSize: 20)),
                                 ),
                                ),
