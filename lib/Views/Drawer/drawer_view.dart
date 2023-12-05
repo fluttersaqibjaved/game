@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gametime/Views/Combat/combatinformation_view.dart';
 import 'package:gametime/Views/Drawer/Appskin_view.dart';
 import 'package:gametime/Views/Drawer/Chat_view.dart';
 import 'package:gametime/Views/Drawer/Discover_view.dart';
 import 'package:gametime/Views/Drawer/Language_view.dart';
+import 'package:gametime/Views/Drawer/Profile_view.dart';
 import 'package:gametime/Views/Drawer/Schedule_view.dart';
 import 'package:gametime/Views/Drawer/Statistics_view.dart';
 import 'package:gametime/Views/Login%20Detail/login_view.dart';
@@ -44,10 +44,10 @@ class _DrawerViewState extends State<DrawerView> {
            ),
                  SizedBox(height: 3.h),
                    Padding(
-          padding: EdgeInsets.symmetric(horizontal: 60.0),
-               child:    Column(
-                 children: [
-                   Row(
+                      padding: EdgeInsets.symmetric(horizontal: 60.0),
+                        child:    Column(
+                          children: [
+                              Row(
                             children: [
                              Image.asset(
                       'assets/images/Avatar.png',
@@ -99,7 +99,7 @@ class _DrawerViewState extends State<DrawerView> {
                                 ],
                               ),
                                  SizedBox(height: 6.h),
-           Row(
+                         Row(
                         children: [
                          Image.asset(
                   'assets/images/Frame 1.png',
@@ -111,7 +111,7 @@ class _DrawerViewState extends State<DrawerView> {
                             onPressed: () {
                                Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => CombatInformationView(),
+                              builder: (context) => ProfileView(),
                             ),
                           );
                             },

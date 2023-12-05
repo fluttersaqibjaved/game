@@ -3,7 +3,6 @@ import 'package:gametime/Views/Combat/Combathome_view.dart';
 import 'package:gametime/Views/Drawer/Chat_view.dart';
 import 'package:gametime/Views/Drawer/Discover_view.dart';
 import 'package:gametime/Views/Drawer/Profile_view.dart';
-import 'package:gametime/Views/Drawer/Statistics_view.dart';
 import 'package:image_picker/image_picker.dart';
 
 
@@ -19,7 +18,7 @@ class _CombatState extends State<Combat> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   PageController _pageController = PageController(initialPage: 0); 
-  int _currentIndex = 1; 
+  int _currentIndex = 0; 
 
   @override
   void dispose() {
@@ -35,6 +34,7 @@ class _CombatState extends State<Combat> {
         _pageController.jumpToPage(_currentIndex);
       }
     });
+   
   }
 
   @override
@@ -46,7 +46,7 @@ class _CombatState extends State<Combat> {
         onPageChanged: _onPageChanged,
         children: [
            CombatHomeView(),
-          StatisticsView(),
+          
           DiscoverView(),
           ChatView(),
           ProfileView(),
@@ -66,6 +66,7 @@ class _CombatState extends State<Combat> {
         onTap: (index) {
           setState(() {
             _currentIndex = index;
+             
             _pageController.animateToPage(
               index,
               duration: Duration(milliseconds: 300),
@@ -75,18 +76,29 @@ class _CombatState extends State<Combat> {
         },
         items: [
           BottomNavigationBarItem(
-            icon: Padding(
-              padding: EdgeInsets.zero,
-              child: Image.asset(
-                'assets/images/Statistics Icon.png',
-                width: 24,
-                height: 24,
-              ),
-            ),
-            label: 'Statistics',
+      icon: GestureDetector(
+        onTap: () {
+          
+          Navigator.pushNamed(context, '/Statistics');
+        },
+        child: Padding(
+        padding: EdgeInsets.zero,
+        child: Image.asset(
+          'assets/images/Statistics Icon.png',
+          width: 24,
+          height: 24,
+        ),
+      ),
           ),
+      label: 'Statistics',
+    ),
           BottomNavigationBarItem(
-            icon: Padding(
+            icon:GestureDetector(
+        onTap: () {
+          
+          Navigator.pushNamed(context, '/Discover');
+        },
+        child: Padding(
               padding: EdgeInsets.zero,
               child: Image.asset(
                 'assets/images/Location_Pin.png',
@@ -94,10 +106,16 @@ class _CombatState extends State<Combat> {
                 height: 24,
               ),
             ),
+          ),
             label: 'Discover',
           ),
           BottomNavigationBarItem(
-            icon: Padding(
+            icon: GestureDetector(
+        onTap: () {
+          
+          Navigator.pushNamed(context, '/Chat');
+        },
+        child:  Padding(
               padding: EdgeInsets.zero,
               child: Image.asset(
                 'assets/images/Chat.png',
@@ -105,19 +123,28 @@ class _CombatState extends State<Combat> {
                 height: 24,
               ),
             ),
+          ),
             label: 'Chat',
           ),
           BottomNavigationBarItem(
-            icon: Padding(
-              padding: EdgeInsets.zero,
-              child: Image.asset(
-                'assets/images/Profile.png',
-                width: 24,
-                height: 24,
-              ),
-            ),
-            label: 'Profile',
+      icon: GestureDetector(
+        onTap: () {
+           setState(() {
+                 
+                });
+          Navigator.pushNamed(context, '/profile');
+        },
+        child: Padding(
+          padding: EdgeInsets.zero,
+          child: Image.asset(
+            'assets/images/Profile.png',
+            width: 24,
+            height: 24,
           ),
+        ),
+      ),
+      label: 'Profile',
+    ),
         ],
       ),
        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

@@ -44,6 +44,7 @@ dependencies:
   intl_phone_number_input: ^0.7.3+1
   image_picker: ^1.0.4
   emoji_picker_flutter: ^1.6.3
+  geolocator: ^10.1.0
   
   
   

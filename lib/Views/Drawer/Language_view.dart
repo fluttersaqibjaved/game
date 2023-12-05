@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class LanguageView extends StatefulWidget {
   const LanguageView({Key? key}) : super(key: key);
@@ -8,35 +9,169 @@ class LanguageView extends StatefulWidget {
 }
 
 class _LanguageViewState extends State<LanguageView> {
-  String? selectedLanguage;
-  final List<String> languages = [
-    'Urdu',
-    'Turkish', 
-    'Arabic',
-    'English',
-    'Chinese',
-    'Japanese',
-  ];
-
+  
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: null,
-      body: ListView.builder(
-        itemCount: languages.length,
-        itemBuilder: (BuildContext context, int index) {
-          final language = languages[index];
-          return ListTile(
-            title: Text(language),
-            onTap: () {
-              setState(() {
-                selectedLanguage = language == selectedLanguage ? null : language;
-              });
-            },
-            selected: selectedLanguage == language,
-            selectedTileColor: Colors.pinkAccent,
-          );
-        },
+  return Scaffold(
+       appBar: null,
+      body:  Padding(
+  padding: EdgeInsets.only(top: 50.0), 
+  child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                        Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 7.w),
+                         child: IconButton(
+                              icon: Icon(Icons.arrow_back, color: Colors.pinkAccent),
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                       ),
+                          SizedBox(height: 2.h),
+                             Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 7.w),
+                              child: Text(
+                                                'Change',
+                                                style: TextStyle(
+                                                  color: Colors.pinkAccent,
+                                                  fontSize: 25,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                            ),
+                
+                    Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 7.w),
+                     child: Text(
+                                       'Language',
+                                       style: TextStyle(
+                      color: Colors.pinkAccent,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                                       ),
+                                     ),
+                   ),
+                SizedBox(height: 5.h),
+                  Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 7.w),
+                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                     children: [
+                       Text(
+                        'English',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                                       ),
+                                       
+                                   Icon(
+            Icons.check, 
+            size: 20, 
+            color: Colors.pinkAccent,
+          ),
+                     ],
+                   ),
+                 ),
+                SizedBox(height: 2.h),
+                  Divider(
+                              color: Colors.grey,
+                              height: 0, 
+                            ),
+                 SizedBox(height: 2.h),
+                  Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 7.w),
+                   child: Text(
+                    'French',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                    ),
+                                   ),
+                 ),
+                SizedBox(height: 2.h),
+                  Divider(
+                              color: Colors.grey,
+                              height: 0, 
+                            ),
+                 SizedBox(height: 2.h),
+                  Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 7.w),
+                   child: Text(
+                    'Dutuch',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                    ),
+                                   ),
+                 ),
+                SizedBox(height: 2.h),
+                  Divider(
+                              color: Colors.grey,
+                              height: 0, 
+                            ),
+                 SizedBox(height: 2.h),
+                  Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 7.w),
+                   child: Text(
+                    'Chinese',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                    ),
+                                   ),
+                 ),
+                SizedBox(height: 2.h),
+                 Divider(
+                              color: Colors.grey,
+                              height: 0, 
+                            ),
+                             SizedBox(height: 2.h),
+                  
+                  Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 7.w),
+                   child: Text(
+                    'Arabic',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                    ),
+                                   ),
+                 ),
+                SizedBox(height: 2.h),
+                 Divider(
+                              color: Colors.grey,
+                              height: 0, 
+                            ),
+                             SizedBox(height: 2.h),
+                  Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 7.w),
+                   child: Text(
+                    'Spanish',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                    ),
+                                   ),
+                 ),
+                SizedBox(height: 2.h),
+                 Divider(
+                              color: Colors.grey,
+                              height: 0, 
+                            ),
+                             SizedBox(height: 2.h),
+               
+                              
+                ]
+                ),
+          
+            ]
+  ),
       ),
     );
   }

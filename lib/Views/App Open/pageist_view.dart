@@ -22,7 +22,7 @@ class _PageistViewState extends State<PageistView> {
             color: Color(0xF4F8FB),
             ),
              Padding(
-  padding: EdgeInsets.only(top: 120.0), 
+  padding: EdgeInsets.only(top: 12.h), 
   child: Center(
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -32,7 +32,7 @@ class _PageistViewState extends State<PageistView> {
         height: 30.h,
         width: 100.w,
         child: Padding(
-          padding: EdgeInsets.only(left: 60.0), 
+          padding: EdgeInsets.only(left: 8.w), 
           child: Image.asset(
             'assets/images/Image.png',
             fit: BoxFit.contain,

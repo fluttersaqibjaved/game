@@ -22,7 +22,7 @@ class _PagerdViewState extends State<PagerdView> {
             color: Color(0xF4F8FB),
             ),
              Padding(
-  padding: EdgeInsets.only(top: 120.0),
+  padding: EdgeInsets.only(top: 12.h),
   child: Center(
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,

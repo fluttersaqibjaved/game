@@ -33,22 +33,13 @@ class _CombatInformationViewState extends State<CombatInformationView> {
                               Navigator.of(context).pop();
                             },
                           ),
-                          SizedBox(height: 3.h),
+                          SizedBox(height: 2.h),
                             Text(
-                  'Combat',
+                  'Combat Information',
                   style: TextStyle(
                     color: Colors.pinkAccent,
-                    fontSize: 30,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
-                  ),
-                ),
-                 SizedBox(height: 1.h),
-                Text(
-                  'Information',
-                  style: TextStyle(
-                    color: Colors.pinkAccent,
-                    fontSize: 30,
-                      fontWeight: FontWeight.bold,
                   ),
                 ),
                 SizedBox(height: 4.h),
@@ -269,7 +260,7 @@ class _CombatInformationViewState extends State<CombatInformationView> {
                   'DISCRIPTION',
                   style: TextStyle(
                     color: Colors.pinkAccent,
-                    fontSize: 20,
+                    fontSize: 14,
                       fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -319,7 +310,7 @@ class _CombatInformationViewState extends State<CombatInformationView> {
                           'CATEGORY',
                           style: TextStyle(
                             color: Colors.pinkAccent,
-                            fontSize: 20,
+                            fontSize: 14,
                               fontWeight: FontWeight.bold,
                           ),
                                       ),
@@ -328,7 +319,7 @@ class _CombatInformationViewState extends State<CombatInformationView> {
                           'Racing',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 20,
+                            fontSize: 14,
                               
                           ),
                                       ),
@@ -342,7 +333,7 @@ class _CombatInformationViewState extends State<CombatInformationView> {
                           'LOCATION',
                           style: TextStyle(
                             color: Colors.pinkAccent,
-                            fontSize: 20,
+                            fontSize: 14,
                               fontWeight: FontWeight.bold,
                           ),
                                       ),
@@ -351,7 +342,7 @@ class _CombatInformationViewState extends State<CombatInformationView> {
                           'Los Angeles',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 20,
+                            fontSize: 14,
                               
                           ),
                                       ),
@@ -591,7 +582,7 @@ class _CombatInformationViewState extends State<CombatInformationView> {
                           'REMAINDER',
                           style: TextStyle(
                             color: Colors.pinkAccent,
-                            fontSize: 20,
+                            fontSize: 14,
                               fontWeight: FontWeight.bold,
                           ),
                                       ),

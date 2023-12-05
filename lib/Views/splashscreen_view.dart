@@ -35,7 +35,7 @@ class _SplashScreenViewState extends State<SplashScreenView> {
           ),
             Center(
             child: Padding(
-                  padding: const EdgeInsets.only(top: 250),
+                  padding:  EdgeInsets.only(top: 35.h),
                   child:
                    Column(
                     mainAxisAlignment: MainAxisAlignment.start,

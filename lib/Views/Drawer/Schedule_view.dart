@@ -15,6 +15,7 @@ class _ScheduleViewState extends State<ScheduleView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: null,
         body:   SingleChildScrollView(
                 child: Padding(
   padding: EdgeInsets.only(top: 40.0),
@@ -292,7 +293,7 @@ class _ScheduleViewState extends State<ScheduleView> {
                                                width: 14,
                                                height: 14, 
                                                
-                                             ),
+                              ),
                                  ],
                                ),
                                 Row(
@@ -322,7 +323,7 @@ class _ScheduleViewState extends State<ScheduleView> {
                                       color: Colors.black,
                                       fontSize: 12,
                                     ),
-                                                               ),
+                                     ),
                                   ],
                                 ),
                                 Row(
@@ -345,7 +346,7 @@ class _ScheduleViewState extends State<ScheduleView> {
                                       color: Colors.black,
                                       fontSize: 12,
                                     ),
-                                                               ),
+                                     ),
                                   ],
                                 ),
                              ],

@@ -19,7 +19,7 @@ class _DiscoverViewState extends State<DiscoverView> {
      
      
      leading: Padding(
-  padding: EdgeInsets.only(left: 30), 
+  padding: EdgeInsets.only(left: 20), 
   child: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.white),
     onPressed: () {
@@ -32,9 +32,8 @@ class _DiscoverViewState extends State<DiscoverView> {
       bottom: PreferredSize(
           preferredSize: const Size.fromHeight(150.0),
           child: Container(
-            padding: const EdgeInsets.only(left: 30, bottom: 30, right: 20,),
+            padding: const EdgeInsets.only(left: 20, bottom: 30, right: 20,),
             child: 
-               
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -43,12 +42,11 @@ class _DiscoverViewState extends State<DiscoverView> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
-                         Text('Discover', style: TextStyle(color: Colors.white, fontSize: 20)),
-                         SizedBox(height: 5),
+                         
                           Row(
                             children: [
-                             Text('Combat', style: TextStyle(color: Colors.white, fontSize: 20)),
-                                SizedBox(width: 170),
+                             Text('Discover Combat', style: TextStyle(color: Colors.white, fontSize: 20)),
+                                SizedBox(width: 120),
 
                              Text('FILTER', style: TextStyle(color: Colors.white, fontSize: 10)),
                             ],
@@ -56,10 +54,10 @@ class _DiscoverViewState extends State<DiscoverView> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 15),
+                    SizedBox(height: 20),
                      Container(
                                 height: 7.h,
-                                width: 80.w,
+                                width: 90.w,
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(25.0),
@@ -838,21 +836,24 @@ class _DiscoverViewState extends State<DiscoverView> {
                           width: 1.sp,
                         ),
                                   ),
-                              child:    Row(
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10,),
+                              
+                               child:  Row(
                             children: [
                              Image.asset(
                       'assets/images/Ellipse.png',
                       fit: BoxFit.fitWidth,
-                      width: 10.0.w,
+                      width: 14.0.w,
                     ),
-                              SizedBox(width: 20),
+                              SizedBox(width: 10),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
                                     'Stone Stellar',
                                     style: TextStyle(
-                                      fontSize: 10,
+                                      fontSize: 7,
                                       color: Colors.pinkAccent,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -863,13 +864,13 @@ class _DiscoverViewState extends State<DiscoverView> {
                                         Image.asset(
                                          'assets/images/Echelon.png',
                                            fit: BoxFit.fitWidth,
-                                           width: 5.0.w,
+                                           width: 4.0.w,
                                            ),
                                            SizedBox(width: 1.w),
                                          Text(
                                         'Gold Player',
                                         style: TextStyle(
-                                          fontSize: 14,
+                                          fontSize: 7,
                                           color: Colors.yellow,
                                           fontWeight: FontWeight.bold,
                                         ),
@@ -882,7 +883,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                                              Text(
                                                'Status:',
                                                style: TextStyle(
-                                              fontSize: 10,
+                                              fontSize: 7,
                                               color: Colors.black,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -890,7 +891,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                                               Text(
                                                'Online',
                                                style: TextStyle(
-                                              fontSize: 10,
+                                              fontSize: 7,
                                               color: Colors.green,
                                               fontWeight: FontWeight.bold,
                                               ),
@@ -902,7 +903,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                                              Text(
                                                'Category:',
                                                style: TextStyle(
-                                              fontSize: 10,
+                                              fontSize: 7,
                                               color: Colors.black,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -910,7 +911,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                                               Text(
                                                'Action Saccer',
                                                style: TextStyle(
-                                              fontSize: 5,
+                                              fontSize: 7,
                                               color: Colors.red,
                                               fontWeight: FontWeight.bold,
                                               ),
@@ -920,7 +921,8 @@ class _DiscoverViewState extends State<DiscoverView> {
                                       ],
                                     ),
                                 ],
-                              )
+                              ),
+                              ),
                                   ),
                                    SizedBox(width: 3.w),
              Container(
@@ -934,12 +936,14 @@ class _DiscoverViewState extends State<DiscoverView> {
                           width: 1.sp,
                         ),
                                   ),
-                              child:    Row(
+                              child:  Padding(padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10,),
+                              
+                              child:  Row(
                             children: [
                              Image.asset(
                       'assets/images/Ellipse.png',
                       fit: BoxFit.fitWidth,
-                      width: 10.0.w,
+                      width: 14.0.w,
                     ),
                               SizedBox(width: 20),
                               Column(
@@ -948,7 +952,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                                   Text(
                                     'Teslar fullar',
                                     style: TextStyle(
-                                      fontSize: 10,
+                                      fontSize: 7,
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -959,13 +963,13 @@ class _DiscoverViewState extends State<DiscoverView> {
                                         Image.asset(
                                          'assets/images/Echelon.png',
                                            fit: BoxFit.fitWidth,
-                                           width: 5.0.w,
+                                           width: 3.0.w,
                                            ),
                                            SizedBox(width: 1.w),
                                          Text(
                                         'Silver Player',
                                         style: TextStyle(
-                                          fontSize: 10,
+                                          fontSize: 7,
                                           color: Colors.grey,
                                           fontWeight: FontWeight.bold,
                                         ),
@@ -978,7 +982,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                                              Text(
                                                'Status:',
                                                style: TextStyle(
-                                              fontSize: 10,
+                                              fontSize: 7,
                                               color: Colors.black,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -986,7 +990,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                                               Text(
                                                'Away',
                                                style: TextStyle(
-                                              fontSize: 10,
+                                              fontSize: 7,
                                               color: Colors.yellow,
                                               fontWeight: FontWeight.bold,
                                               ),
@@ -998,15 +1002,15 @@ class _DiscoverViewState extends State<DiscoverView> {
                                              Text(
                                                'Category:',
                                                style: TextStyle(
-                                              fontSize: 10,
+                                              fontSize: 7,
                                               color: Colors.black,
                                               fontWeight: FontWeight.bold,
                                             ),
                                            ),
                                               Text(
-                                               'Action Saccer',
+                                               'Action Sacer',
                                                style: TextStyle(
-                                              fontSize: 5,
+                                              fontSize: 6,
                                               color: Colors.red,
                                               fontWeight: FontWeight.bold,
                                               ),
@@ -1016,7 +1020,8 @@ class _DiscoverViewState extends State<DiscoverView> {
                                       ],
                                     ),
                                 ],
-                              )
+                              ),
+                              ),
                                   ),
                     ],
                   ),
@@ -1106,7 +1111,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Scott Brown',
+                            'Bababe Olina',
                             style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
@@ -1141,7 +1146,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Stoe Stella',
+                            'Yusaf Usman',
                             style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
@@ -1166,7 +1171,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Hola5',
+                            'Avengers',
                             style: TextStyle(
                               color: Colors.pinkAccent,
                               fontWeight: FontWeight.bold,
@@ -1216,7 +1221,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'S4,000',
+                            'S9,000',
                             style: TextStyle(
                               color: Colors.pink,
                               fontWeight: FontWeight.bold,
@@ -1261,7 +1266,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Shedroc Bety',
+                            'Falana Adejan',
                             style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
@@ -1296,7 +1301,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Usman Terik',
+                            'Tobi Dubala',
                             style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
@@ -1321,7 +1326,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Martal Kombat',
+                            'WWI',
                             style: TextStyle(
                               color: Colors.pinkAccent,
                               fontWeight: FontWeight.bold,
@@ -1346,7 +1351,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Cancalled',
+                            'Closed',
                             style: TextStyle(
                               color: Colors.grey,
                               fontWeight: FontWeight.bold,
@@ -1371,7 +1376,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'S7,000',
+                            'S3,000',
                             style: TextStyle(
                               color: Colors.pink,
                               fontWeight: FontWeight.bold,
@@ -1416,7 +1421,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Jully Paga',
+                            'Bababe Olina',
                             style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
@@ -1451,7 +1456,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Dada Awuri',
+                            'Yusaf Usman',
                             style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
@@ -1476,7 +1481,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'NFS(Rivals 2)',
+                            'Modren Combat',
                             style: TextStyle(
                               color: Colors.pinkAccent,
                               fontWeight: FontWeight.bold,
@@ -1526,7 +1531,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'S4,000',
+                            'S3,00',
                             style: TextStyle(
                               color: Colors.pink,
                               fontWeight: FontWeight.bold,
@@ -1571,7 +1576,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Oyiba Pepper',
+                            'Falana Adejan',
                             style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
@@ -1606,7 +1611,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Sherma Laset',
+                            'Tobi Dubala',
                             style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
@@ -1631,7 +1636,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Ced Hand',
+                            'Ced 2019',
                             style: TextStyle(
                               color: Colors.pinkAccent,
                               fontWeight: FontWeight.bold,
@@ -1656,9 +1661,9 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Acitve',
+                            'Processing',
                             style: TextStyle(
-                              color: Colors.green,
+                              color: Colors.pinkAccent,
                               fontWeight: FontWeight.bold,
                               fontSize: 10,
                             ),
@@ -1681,7 +1686,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'S3,000',
+                            'S8,000',
                             style: TextStyle(
                               color: Colors.pink,
                               fontWeight: FontWeight.bold,

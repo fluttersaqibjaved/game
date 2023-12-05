@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gametime/Views/Combat/filter_view.dart';
 import 'package:sizer/sizer.dart';
 
 class CombatJoinView extends StatefulWidget {
@@ -94,7 +95,12 @@ class _CombatJoinViewState extends State<CombatJoinView> {
          SizedBox(height: 4.h),
                             TextButton(
                             onPressed: () async {   
-                            
+                              Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => FilterView(),
+                            ),
+                          );
+
                             },
                                  child: Container(
                                   alignment: Alignment.center,

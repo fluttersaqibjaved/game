@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:gametime/Views/Drawer/acountinformation_view.dart';
-import 'package:gametime/Views/Drawer/changepassword_view.dart';
-import 'package:gametime/Views/Drawer/payments_view.dart';
 import 'package:sizer/sizer.dart';
 
-class ProfileView extends StatefulWidget {
-  const ProfileView({super.key});
+class PlayerInformationView extends StatefulWidget {
+  const PlayerInformationView({super.key});
 
   @override
-  State<ProfileView> createState() => _ProfileViewState();
+  State<PlayerInformationView> createState() => _PlayerInformationViewState();
 }
 
-class _ProfileViewState extends State<ProfileView> {
+class _PlayerInformationViewState extends State<PlayerInformationView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +34,7 @@ class _ProfileViewState extends State<ProfileView> {
                           ),
                           SizedBox(height: 2.h),
                             Text(
-                  'Profile',
+                  'Player Information',
                   style: TextStyle(
                     color: Colors.pinkAccent,
                     fontSize: 20,
@@ -180,7 +177,7 @@ class _ProfileViewState extends State<ProfileView> {
                                     ),
                                   ],
                                 ), 
-                                SizedBox(height: 1.h),
+                                SizedBox(height: 3.h),
                                   Text(
                                       'BIO',
                                       style: TextStyle(
@@ -213,7 +210,7 @@ class _ProfileViewState extends State<ProfileView> {
                               
                           ),
                                       ),
-                                       SizedBox(height: 1.h),
+                                       SizedBox(height: 3.h),
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
@@ -233,28 +230,7 @@ class _ProfileViewState extends State<ProfileView> {
                                       ),
                                       ]
                                        ),
-                                Container(
-                                                                                     height: 4.h,
-                                                                   width: 15.w,
-                                                                 decoration: BoxDecoration(
-                                                                       color: Colors.pinkAccent,
-                                                                       borderRadius: BorderRadius.circular(5.sp),
-                                                                     
-                                                                 ),
-                                             child: Column(
-                                              mainAxisAlignment: MainAxisAlignment.center,
-                                               children: [
-                                                 Text(
-                                                                           'Edit Bio',
-                                                                           style: TextStyle(
-                                                                             color: Colors.white,
-                                                                             fontSize: 14,
-                                                                               
-                                                                           ),
-                                                                                       ),
-                                               ],
-                                             ),
-                                                                                    ),
+                               
                               ],
                             ),
                            
@@ -446,7 +422,7 @@ class _ProfileViewState extends State<ProfileView> {
                               fontWeight: FontWeight.bold,
                           ),
                                       ),
-                                      SizedBox(height: 1.h),
+                                      SizedBox(height: 2.h),
                                        Text(
                           'Los Angeles',
                           style: TextStyle(
@@ -455,69 +431,348 @@ class _ProfileViewState extends State<ProfileView> {
                               
                           ),
                                       ),
-                                        Text(
-                          'Edit Funcation',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 14,
-                              
-                          ),
-                                      ),
                 
                   SizedBox(height: 2.h),
-                             TextButton(
-  onPressed: () {
-     Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => AccountInformationView()),
-            );
-  },
-  child: Text(
-    'Account Information',
-    style: TextStyle(
-      color: Colors.pinkAccent,
-      fontSize: 14,
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-),
-                                    TextButton(
-  onPressed: () {
-     Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => ChangePasswordView()),
-            );
-  },
-  child: Text(
-    'Change Password',
-    style: TextStyle(
-      color: Colors.pinkAccent,
-      fontSize: 14,
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-),
-
-  TextButton(
-  onPressed: () {
-     Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => PaymentView()),
-            );
-  },
-  child: Text(
-    'Payments & Billing',
-    style: TextStyle(
-      color: Colors.pinkAccent,
-      fontSize: 14,
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-),
-
-                                          
+                               Text(
+                          'Player',
+                          style: TextStyle(
+                            color: Colors.pinkAccent,
+                            fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                          ),
+                                      ),
+                                          Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                                        'Combat',
+                                                                        style: TextStyle(
+                                                                          color: Colors.pinkAccent,
+                                                                          fontSize: 14,
+                                                                            fontWeight: FontWeight.bold,
+                                                                        ),
+                                                                                    ),
+                                                                                      Text(
+                                                                        'Filter',
+                                                                        style: TextStyle(
+                                                                          color: Colors.black,
+                                                                          fontSize: 14,
+                                                                            fontWeight: FontWeight.bold,
+                                                                        ),
+                                                                                    ),
+                                            ],
+                                          ),
                                       SizedBox(height: 2.h),
-                                                     
+                                        Container(
+                height: 10.h,
+                width: 100.w,
+              decoration: BoxDecoration(
+                    
+                    borderRadius: BorderRadius.circular(5.sp),
+                    border: Border.all(
+                      color: Colors.pinkAccent,
+                      width: 1.sp,
+                    ),
+              ),
+          child:  Padding(
+         padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 1.5.h,), 
+          child:
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   children: [
+                    
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/Avatar.png',
+                            width: 24,
+                            height: 24,
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Scott Brown',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 5,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                         
+                        ],
+                      ),
+                      SizedBox(width: 3.w),
+                                       Column(
+                                              children: [
+                                                Text(
+                                                                            'VS',
+                                                                            style: TextStyle(
+                                                                              color: Colors.pinkAccent,
+                                                                              fontWeight: FontWeight.bold,
+                                                                              fontSize: 20,
+                                                                            ),
+                                                                          ),
+                                              ],
+                                            ), 
+                          SizedBox(width: 2.w),
+                                    Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/Avatar.png',
+                            width: 24,
+                            height: 24,
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Stoe Stella',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 5,
+                            ),
+                          ),
+                          
+                         
+                        ],
+                      ),
+                      SizedBox(width: 2.w),
+                        Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                         Text(
+                            'Game Name:',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 10,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Hola5',
+                            style: TextStyle(
+                              color: Colors.pinkAccent,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 10,
+                            ),
+                          ),
+                          
+                         
+                        ],
+                      ),
+                      SizedBox(width: 2.w),
+                        Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                        Text(
+                            'Status:',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 10,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Open',
+                            style: TextStyle(
+                              color: Colors.pinkAccent,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 10,
+                            ),
+                          ),
+                          
+                         
+                        ],
+                      ),
+                      SizedBox(width: 2.w),
+                        Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                           Text(
+                            'Winning Price:',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 10,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'S4,000',
+                            style: TextStyle(
+                              color: Colors.pink,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 10,
+                            ),
+                          ),
+                         
+                         
+                        ],
+                      ),
+
+                   ],
+                 ),
+            ),
+              ),
+              SizedBox(height: 1.h),
+               Container(
+                height: 10.h,
+                width: 100.w,
+              decoration: BoxDecoration(
+                    
+                    borderRadius: BorderRadius.circular(5.sp),
+                    border: Border.all(
+                      color: Colors.pinkAccent,
+                      width: 1.sp,
+                    ),
+              ),
+          child:  Padding(
+          padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 1.5.h,), 
+          child:
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   children: [
+                    
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/Avatar.png',
+                            width: 24,
+                            height: 24,
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Shedroc Bety',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 5,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                         
+                        ],
+                      ),
+                      SizedBox(width: 3.w),
+                                        Column(
+                                              children: [
+                                                Text(
+                                                                            'VS',
+                                                                            style: TextStyle(
+                                                                              color: Colors.pinkAccent,
+                                                                              fontWeight: FontWeight.bold,
+                                                                              fontSize: 20,
+                                                                            ),
+                                                                          ),
+                                              ],
+                                            ), 
+                          SizedBox(width: 2.w),
+                                    Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/Avatar.png',
+                            width: 24,
+                            height: 24,
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Usman Terik',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 5,
+                            ),
+                          ),
+                          
+                         
+                        ],
+                      ),
+                      SizedBox(width: 2.w),
+                        Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                         Text(
+                            'Game Name:',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 10,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Martal Kombat',
+                            style: TextStyle(
+                              color: Colors.pinkAccent,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 10,
+                            ),
+                          ),
+                          
+                         
+                        ],
+                      ),
+                      SizedBox(width: 2.w),
+                        Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                        Text(
+                            'Status:',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 10,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Cancalled',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 10,
+                            ),
+                          ),
+                          
+                         
+                        ],
+                      ),
+                      SizedBox(width: 2.w),
+                        Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                           Text(
+                            'Winning Price:',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 10,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'S7,000',
+                            style: TextStyle(
+                              color: Colors.pink,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 10,
+                            ),
+                          ),
+                         
+                         
+                        ],
+                      ),
+
+                   ],
+                 ),
+            ),
+              ),
+                     SizedBox(height: 2.h),                
                 ],
                       ),
               ),
