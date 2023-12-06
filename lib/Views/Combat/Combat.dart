@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gametime/Views/Combat/Combathome_view.dart';
 import 'package:gametime/Views/Drawer/Chat_view.dart';
 import 'package:gametime/Views/Drawer/Discover_view.dart';
-import 'package:gametime/Views/Drawer/Profile_view.dart';
+import 'package:gametime/Views/Drawer/Statistics_view.dart';
 import 'package:image_picker/image_picker.dart';
 
 
@@ -45,11 +45,11 @@ class _CombatState extends State<Combat> {
         controller: _pageController,
         onPageChanged: _onPageChanged,
         children: [
-           CombatHomeView(),
-          
+           
+          StatisticsView(),
           DiscoverView(),
           ChatView(),
-          ProfileView(),
+          CombatHomeView(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

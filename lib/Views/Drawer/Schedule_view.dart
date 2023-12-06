@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:gametime/Views/Drawer/Statistics_view.dart';
+import 'package:gametime/Views/Drawer/publish_view.dart';
 import 'package:sizer/sizer.dart';
 
 class ScheduleView extends StatefulWidget {
@@ -362,7 +362,7 @@ class _ScheduleViewState extends State<ScheduleView> {
                                             builder: (context) {
                                               return BackdropFilter(
                                                 filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
-                                                child: StatisticsView(),
+                                                child: PublishView(),
                                               );
                                             },
                                           ),

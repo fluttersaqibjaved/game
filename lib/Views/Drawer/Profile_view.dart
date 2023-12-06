@@ -17,10 +17,9 @@ class _ProfileViewState extends State<ProfileView> {
     return Scaffold(
       appBar: null,
       body:
-        SingleChildScrollView(
-          child:
+       
            Padding(
-  padding: EdgeInsets.only(top: 50.0), 
+  padding: EdgeInsets.only(top: 10.0), 
   child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -381,7 +380,7 @@ class _ProfileViewState extends State<ProfileView> {
                                            ),
                                          ],
                                        ),
-                                       SizedBox(height: 2.h),
+                                       SizedBox(height: 1.h),
                                          Row(
                                            children: [
                                              Container(
@@ -442,16 +441,16 @@ class _ProfileViewState extends State<ProfileView> {
                           'LOCATION',
                           style: TextStyle(
                             color: Colors.pinkAccent,
-                            fontSize: 14,
+                            fontSize: 12,
                               fontWeight: FontWeight.bold,
                           ),
                                       ),
-                                      SizedBox(height: 1.h),
+                                      
                                        Text(
                           'Los Angeles',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 14,
+                            fontSize: 12,
                               
                           ),
                                       ),
@@ -459,64 +458,69 @@ class _ProfileViewState extends State<ProfileView> {
                           'Edit Funcation',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 14,
+                            fontSize: 12,
                               
                           ),
                                       ),
                 
-                  SizedBox(height: 2.h),
-                             TextButton(
-  onPressed: () {
-     Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => AccountInformationView()),
-            );
-  },
-  child: Text(
-    'Account Information',
-    style: TextStyle(
-      color: Colors.pinkAccent,
-      fontSize: 14,
-      fontWeight: FontWeight.bold,
+                  SizedBox(height: 1.h),
+                       
+    TextButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => AccountInformationView()),
+        );
+      },
+      child: Text(
+        'Account Information',
+        style: TextStyle(
+          color: Colors.pinkAccent,
+          fontSize: 12,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
     ),
-  ),
-),
-                                    TextButton(
-  onPressed: () {
-     Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => ChangePasswordView()),
-            );
-  },
-  child: Text(
-    'Change Password',
-    style: TextStyle(
-      color: Colors.pinkAccent,
-      fontSize: 14,
-      fontWeight: FontWeight.bold,
+    
+    TextButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => ChangePasswordView()),
+        );
+      },
+      child: Text(
+        'Change Password',
+        style: TextStyle(
+          color: Colors.pinkAccent,
+          fontSize: 12,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
     ),
-  ),
-),
+   
+    TextButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => PaymentView()),
+        );
+      },
+      child: Text(
+        'Payments & Billing',
+        style: TextStyle(
+          color: Colors.pinkAccent,
+          fontSize: 12,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ),
+    
+  
 
-  TextButton(
-  onPressed: () {
-     Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => PaymentView()),
-            );
-  },
-  child: Text(
-    'Payments & Billing',
-    style: TextStyle(
-      color: Colors.pinkAccent,
-      fontSize: 14,
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-),
 
                                           
-                                      SizedBox(height: 2.h),
+                                      
                                                      
                 ],
                       ),
@@ -525,7 +529,7 @@ class _ProfileViewState extends State<ProfileView> {
             ],
           ),
         ),
-        ),
+        
     );
   }
 }

@@ -212,7 +212,7 @@ class _PlayerInformationViewState extends State<PlayerInformationView> {
                                       ),
                                        SizedBox(height: 3.h),
                                       Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        mainAxisAlignment: MainAxisAlignment.center, 
                                       children: [
                                         Image.asset(
                                          'assets/images/Echelon.png',
