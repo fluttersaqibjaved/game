@@ -76,14 +76,27 @@ class _StatisticsViewState extends State<StatisticsView> {
                                                   ),
                                                 ),
                                                  SizedBox(height: 1.h),
-                                                   Text(
-                                              'S240.00',
-                                              style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 25,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                             ),
+                                                   Row(
+                                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                     children: [
+                                                       Text(
+                                                                                                     'S240.00',
+                                                                                                     style: TextStyle(
+                                                                                                       color: Colors.white,
+                                                                                                       fontSize: 25,
+                                                                                                       fontWeight: FontWeight.bold,
+                                                                                                     ),
+                                                                                                    ),
+                                                                                                   SizedBox(
+          height: 5.h,
+          width: 25.w,
+          child: Image.asset(
+            'assets/images/Stats.png',
+           
+          ),
+        ),
+                                                     ],
+                                                   ),
                                               ],
                                             ),
                                     ),
