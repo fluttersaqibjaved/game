@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gametime/Views/Drawer/Profile_view.dart';
 import 'package:sizer/sizer.dart';
 
 class PaymentView extends StatefulWidget {
@@ -146,7 +147,11 @@ class _PaymentViewState extends State<PaymentView> {
            ),
            TextButton(
                     onPressed: () async {
-                      
+                       Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => ProfileView(),
+                            ),
+                          );
                     },
                          child: Container(
                           alignment: Alignment.center,

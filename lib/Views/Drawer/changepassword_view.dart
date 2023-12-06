@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gametime/Views/Mobile%20Number/mobilenumber_view.dart';
+import 'package:gametime/Views/Drawer/Profile_view.dart';
 import 'package:sizer/sizer.dart';
 
 class ChangePasswordView extends StatefulWidget {
@@ -161,7 +161,7 @@ SizedBox(height: 1.h),
                     onPressed: () async {
                         Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => MobileNumberView(),
+                              builder: (context) => ProfileView(),
                             ),
                           );
                     },
