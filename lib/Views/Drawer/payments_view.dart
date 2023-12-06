@@ -14,7 +14,7 @@ class _PaymentViewState extends State<PaymentView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: null,
-      body: Padding(padding: EdgeInsets.only(top: 20),
+      body: Padding(padding: EdgeInsets.only(top: 50),
        child: Column(
         children: [
            Padding(
@@ -24,13 +24,20 @@ class _PaymentViewState extends State<PaymentView> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                                 
-                              IconButton(
-                                  icon: Icon(Icons.arrow_back, color: Colors.pinkAccent),
-                                  onPressed: () {
-                                    Navigator.of(context).pop();
-                                  },
-                                ),
-                           
+                              GestureDetector(
+            onTap: () {
+              Navigator.of(context).pop();  
+            },
+            child: SizedBox(
+              height: 30,
+              width: 30,
+              child: Image.asset(
+                'assets/images/Frame 9.png',
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
+                           SizedBox(height: 2.h),
                                 Text(
                             'Payments',
                             style: TextStyle(

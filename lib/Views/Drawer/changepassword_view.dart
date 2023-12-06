@@ -61,13 +61,20 @@ void _togglePasswordVisibility() {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                             
-                          IconButton(
-                              icon: Icon(Icons.arrow_back, color: Colors.pinkAccent),
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                              },
-                            ),
-                       
+                         GestureDetector(
+            onTap: () {
+              Navigator.of(context).pop();  
+            },
+            child: SizedBox(
+              height: 30,
+              width: 30,
+              child: Image.asset(
+                'assets/images/Frame 9.png',
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
+                       SizedBox(height: 2.h),
                             Text(
                         'Change',
                         style: TextStyle(

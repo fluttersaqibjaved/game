@@ -14,7 +14,7 @@ class _StatisticsViewState extends State<StatisticsView> {
     return Scaffold(
       appBar: null,
       body:  SingleChildScrollView(
-        child: Padding(padding: EdgeInsets.only(top: 20),
+        child: Padding(padding: EdgeInsets.only(top: 30),
          child: Column(
           children: [
              Padding(
@@ -24,13 +24,20 @@ class _StatisticsViewState extends State<StatisticsView> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                   
-                                IconButton(
-                                    icon: Icon(Icons.arrow_back, color: Colors.pinkAccent),
-                                    onPressed: () {
-                                      Navigator.of(context).pop();
-                                    },
-                                  ),
-                             
+                              GestureDetector(
+            onTap: () {
+              Navigator.of(context).pop();  
+            },
+            child: SizedBox(
+              height: 30,
+              width: 30,
+              child: Image.asset(
+                'assets/images/Frame 9.png',
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
+          SizedBox(height: 2.h),
                                   Text(
                               'Statistics',
                               style: TextStyle(

@@ -19,7 +19,7 @@ class _ProfileViewState extends State<ProfileView> {
       body:
        
            Padding(
-  padding: EdgeInsets.only(top: 10.0), 
+  padding: EdgeInsets.only(top: 20.0), 
   child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -28,12 +28,19 @@ class _ProfileViewState extends State<ProfileView> {
                 child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                       IconButton(
-                            icon: Icon(Icons.arrow_back, color: Colors.pinkAccent),
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            },
-                          ),
+                      GestureDetector(
+            onTap: () {
+              Navigator.of(context).pop();  
+            },
+            child: SizedBox(
+              height: 30,
+              width: 30,
+              child: Image.asset(
+                'assets/images/Frame 9.png',
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
                           SizedBox(height: 2.h),
                             Text(
                   'Profile',
