@@ -119,7 +119,7 @@ class _ProfileViewState extends State<ProfileView> {
                 getImage(ImageSource.gallery);
               },
               child: CircleAvatar(
-                radius: 60,
+                radius: 30,
                 backgroundImage: _image != null ? FileImage(_image!) : null,
                 child: _image == null
                     ? Icon(Icons.person, size: 60, color: Colors.grey)
@@ -276,13 +276,13 @@ class _ProfileViewState extends State<ProfileView> {
                                         Image.asset(
                                          'assets/images/Echelon.png',
                                            fit: BoxFit.fitWidth,
-                                           width: 5.0.w,
+                                           width: 3.0.w,
                                            ),
                                            SizedBox(width: 1.w),
                                          Text(
                                         'Gold Player',
                                         style: TextStyle(
-                                          fontSize: 17,
+                                          fontSize: 10,
                                           color: Colors.yellow,
                                           fontWeight: FontWeight.bold,
                                         ),
