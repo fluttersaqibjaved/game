@@ -1,7 +1,11 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:gametime/Views/Drawer/acountinformation_view.dart';
 import 'package:gametime/Views/Drawer/changepassword_view.dart';
 import 'package:gametime/Views/Drawer/payments_view.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sizer/sizer.dart';
 
 class ProfileView extends StatefulWidget {
@@ -12,7 +16,46 @@ class ProfileView extends StatefulWidget {
 }
 
 class _ProfileViewState extends State<ProfileView> {
+  
+ File? _image;
+  late SharedPreferences _prefs;
+
+  final ImagePicker _picker = ImagePicker();
+
   @override
+  void initState() {
+    super.initState();
+    _loadImageFromPrefs();
+  }
+
+  Future<void> _loadImageFromPrefs() async {
+    _prefs = await SharedPreferences.getInstance();
+    String? imagePath = _prefs.getString('imagePath');
+    if (imagePath != null && imagePath.isNotEmpty) {
+      setState(() {
+        _image = File(imagePath);
+      });
+    }
+  }
+
+  Future<void> _saveImageToPrefs(String imagePath) async {
+    _prefs.setString('imagePath', imagePath);
+  }
+
+  Future getImage(ImageSource source) async {
+    final pickedFile = await _picker.pickImage(
+      source: source,
+      imageQuality: 50,
+    );
+
+    setState(() {
+      if (pickedFile != null) {
+        _image = File(pickedFile.path);
+        _saveImageToPrefs(_image!.path);
+      }
+    });
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: null,
@@ -71,11 +114,18 @@ class _ProfileViewState extends State<ProfileView> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Image.asset(
-                                  'assets/images/Avatar.png',
-                                  width: 60,
-                                  height: 60,
-                                ),
+                               GestureDetector(
+              onTap: () {
+                getImage(ImageSource.gallery);
+              },
+              child: CircleAvatar(
+                radius: 60,
+                backgroundImage: _image != null ? FileImage(_image!) : null,
+                child: _image == null
+                    ? Icon(Icons.person, size: 60, color: Colors.grey)
+                    : null,
+              ),
+            ),
                                 SizedBox(height: 10),
                                 Text(
                                   'Scott Brown',
