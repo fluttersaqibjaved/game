@@ -441,6 +441,22 @@ class _ProfileViewState extends State<ProfileView> {
                                                ],
                                              ),
                                                                                     ),
+                                                                                     SizedBox(width: 4.w),
+                                                                                     Container(
+            width: 5.w, 
+            height: 3.h, 
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.pinkAccent, 
+            ),
+            child: Center(
+              child: Icon(
+                Icons.add,
+                color: Colors.white, 
+                size: 16, 
+              ),
+            ),
+          ),
                                            ],
                                          ),
                 SizedBox(height: 2.h),
@@ -448,8 +464,8 @@ class _ProfileViewState extends State<ProfileView> {
                           'LOCATION',
                           style: TextStyle(
                             color: Colors.pinkAccent,
-                            fontSize: 12,
-                              fontWeight: FontWeight.bold,
+                            fontSize: 10,
+                              
                           ),
                                       ),
                                       
@@ -458,71 +474,134 @@ class _ProfileViewState extends State<ProfileView> {
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 12,
-                              
+                              fontWeight: FontWeight.bold,
                           ),
                                       ),
                                         Text(
                           'Edit Funcation',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 12,
+                            fontSize: 10 ,
                               
                           ),
                                       ),
                 
                   SizedBox(height: 1.h),
                        
-    TextButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => AccountInformationView()),
-        );
-      },
-      child: Text(
-        'Account Information',
-        style: TextStyle(
-          color: Colors.pinkAccent,
-          fontSize: 12,
-          fontWeight: FontWeight.bold,
+    Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        TextButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => AccountInformationView()),
+            );
+          },
+          child: Text(
+            'Account Information',
+            style: TextStyle(
+              color: Colors.pinkAccent,
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
-      ),
+       Container(
+            width: 5.w, 
+            height: 3.h, 
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(color: Colors.pinkAccent),
+              color: Colors.white, 
+            ),
+            child: Center(
+              child: Icon(
+                Icons.arrow_forward,
+                color: Colors.pinkAccent, 
+                size: 16,
+              ),
+            ),
+          ),
+      ],
     ),
     
-    TextButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => ChangePasswordView()),
-        );
-      },
-      child: Text(
-        'Change Password',
-        style: TextStyle(
-          color: Colors.pinkAccent,
-          fontSize: 12,
-          fontWeight: FontWeight.bold,
+    Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        TextButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ChangePasswordView()),
+            );
+          },
+          child: Text(
+            'Change Password',
+            style: TextStyle(
+              color: Colors.pinkAccent,
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
-      ),
+       Container(
+            width: 5.w, 
+            height: 3.h, 
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(color: Colors.pinkAccent),
+              color: Colors.white, 
+            ),
+            child: Center(
+              child: Icon(
+                Icons.arrow_forward,
+                color: Colors.pinkAccent, 
+                size: 16,
+              ),
+            ),
+          ),
+      ],
     ),
    
-    TextButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => PaymentView()),
-        );
-      },
-      child: Text(
-        'Payments & Billing',
-        style: TextStyle(
-          color: Colors.pinkAccent,
-          fontSize: 12,
-          fontWeight: FontWeight.bold,
+    Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        TextButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => PaymentView()),
+            );
+          },
+          child: Text(
+            'Payments & Billing',
+            style: TextStyle(
+              color: Colors.pinkAccent,
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
-      ),
+      Container(
+            width: 5.w, 
+            height: 3.h, 
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(color: Colors.pinkAccent),
+              color: Colors.white, 
+            ),
+            child: Center(
+              child: Icon(
+                Icons.arrow_forward,
+                color: Colors.pinkAccent, 
+                size: 16,
+              ),
+            ),
+          ),
+        
+      ],
     ),
-    
   
 
 

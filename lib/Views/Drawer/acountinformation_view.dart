@@ -90,7 +90,7 @@ class _AccountInformationViewState extends State<AccountInformationView> {
                             'All your account information can be accessed and edited',
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 15,
+                              fontSize: 10,
                               fontWeight: FontWeight.bold
                             ),
                           ),
@@ -98,7 +98,7 @@ class _AccountInformationViewState extends State<AccountInformationView> {
                             'here but your mail will still remain edited.',
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 15,
+                              fontSize: 10,
                               fontWeight: FontWeight.bold
                             ),
                           ),

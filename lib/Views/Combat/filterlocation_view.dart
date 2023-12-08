@@ -23,12 +23,19 @@ class _FilterLocationViewState extends State<FilterLocationView> {
                 children: [
                         Padding(
                                 padding: EdgeInsets.symmetric(horizontal: 5.w),
-                         child: IconButton(
-                              icon: Icon(Icons.arrow_back, color: Colors.pinkAccent),
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                              },
-                            ),
+                         child:    GestureDetector(
+            onTap: () {
+              Navigator.of(context).pop();  
+            },
+            child: SizedBox(
+              height: 30,
+              width: 30,
+              child: Image.asset(
+                'assets/images/Frame 9.png',
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
                        ),
                           SizedBox(height: 2.h),
                              Padding(
@@ -189,13 +196,25 @@ class _FilterLocationViewState extends State<FilterLocationView> {
                              SizedBox(height: 1.h),
                                 Padding(
                                 padding: EdgeInsets.symmetric(horizontal: 5.w),
-                                 child: Text(
-                                                   'Australia',
-                                                   style: TextStyle(
-                                                     color: Colors.black,
-                                                     fontSize: 15,
-                                                   ),
-                                                 ),
+                                 child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                   children: [
+                                     Text(
+                                                       'Australia',
+                                                       style: TextStyle(
+                                                         color: Colors.black,
+                                                         fontSize: 15,
+                                                          fontWeight: FontWeight.bold,
+                                                       ),
+                                                     ),
+                                                       Icon(
+            Icons.check, 
+            size: 20, 
+            color: Colors.pinkAccent,
+          ),
+                                   ],
+                                 ),
+                                                
                                ),
                  SizedBox(height: 1.h),
                  Divider(

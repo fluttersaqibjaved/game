@@ -15,8 +15,7 @@ class _ChatViewState extends State<ChatView> {
     return Scaffold(
       appBar: null,
      body: 
-      SingleChildScrollView(
-                child: Padding(
+     Padding(
   padding: EdgeInsets.only(top: 40.0),
   child:
                     
@@ -121,22 +120,24 @@ focusedBorder: UnderlineInputBorder(
     ),
   ),
                                child:   Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                              Image.asset(
                       'assets/images/Group 395.png',
                       fit: BoxFit.fitWidth,
-                      width: 22.0.w,
+                      width: 18.0.w,
                     ),
                               SizedBox(width: 20),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Row(
+                                    
                                       children: [
                                   Text(
                                     'Scott Brown',
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       color: Colors.pinkAccent,
                                       
                                     ),
@@ -145,7 +146,7 @@ focusedBorder: UnderlineInputBorder(
                                    Text(
                                         '07:21',
                                         style: TextStyle(
-                                          fontSize: 14,
+                                          fontSize: 10,
                                           color: Colors.pinkAccent,
                                           
                                         ),
@@ -167,7 +168,7 @@ focusedBorder: UnderlineInputBorder(
                                          Text(
                                         'Halo 5 gameplay is so swift',
                                         style: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: 10,
                                           color: Colors.black,
                                           
                                         ),
@@ -175,7 +176,7 @@ focusedBorder: UnderlineInputBorder(
                                          Text(
                                         'and easy.',
                                         style: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: 10,
                                           color: Colors.black,
                                           
                                         ),
@@ -208,11 +209,12 @@ focusedBorder: UnderlineInputBorder(
   ),
                                child:
                               Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                              Image.asset(
                       'assets/images/Group 395.png',
                       fit: BoxFit.fitWidth,
-                      width: 22.0.w,
+                      width: 18.0.w,
                     ),
                               SizedBox(width: 20),
                               Column(
@@ -223,7 +225,7 @@ focusedBorder: UnderlineInputBorder(
                                   Text(
                                     'Phillip Mandella',
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       color: Colors.pinkAccent,
                                       
                                     ),
@@ -232,7 +234,7 @@ focusedBorder: UnderlineInputBorder(
                                    Text(
                                         '02:28',
                                         style: TextStyle(
-                                          fontSize: 14,
+                                          fontSize: 10,
                                           color: Colors.pinkAccent,
                                           
                                         ),
@@ -249,7 +251,7 @@ focusedBorder: UnderlineInputBorder(
                                          Text(
                                         'Justice league chapter 41 is',
                                         style: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: 10,
                                           color: Colors.black,
                                           
                                         ),
@@ -257,7 +259,7 @@ focusedBorder: UnderlineInputBorder(
                                          Text(
                                         'a no go area am stucked!',
                                         style: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: 10,
                                           color: Colors.black,
                                           
                                         ),
@@ -289,12 +291,12 @@ focusedBorder: UnderlineInputBorder(
   ),
                                child:
                               Row(
-                                
+                                mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                                 Image.asset(
                       'assets/images/Group 395.png',
                       fit: BoxFit.fitWidth,
-                      width: 22.0.w,
+                      width: 18.0.w,
                     ),
                               SizedBox(width: 20),
                               Column(
@@ -305,7 +307,7 @@ focusedBorder: UnderlineInputBorder(
                                   Text(
                                     'Ar Katharine',
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       color: Colors.pinkAccent,
                                       
                                     ),
@@ -314,7 +316,7 @@ focusedBorder: UnderlineInputBorder(
                                    Text(
                                         '07:21',
                                         style: TextStyle(
-                                          fontSize: 14,
+                                          fontSize: 10,
                                           color: Colors.pinkAccent,
                                           
                                         ),
@@ -331,7 +333,7 @@ focusedBorder: UnderlineInputBorder(
                                          Text(
                                         'please can you share me',
                                         style: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: 10,
                                           color: Colors.black,
                                           
                                         ),
@@ -339,7 +341,7 @@ focusedBorder: UnderlineInputBorder(
                                          Text(
                                         'our gaming techquies?',
                                         style: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: 10,
                                           color: Colors.black,
                                           
                                         ),
@@ -371,11 +373,12 @@ focusedBorder: UnderlineInputBorder(
   ),
                                child:
                                 Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                              Image.asset(
                       'assets/images/Ellipse.png',
                       fit: BoxFit.fitWidth,
-                      width: 22.0.w,
+                      width: 18.0.w,
                     ),
                               SizedBox(width: 20),
                               Column(
@@ -386,7 +389,7 @@ focusedBorder: UnderlineInputBorder(
                                   Text(
                                     'Gamers Zone',
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       color: Colors.pinkAccent,
                                       
                                     ),
@@ -395,7 +398,7 @@ focusedBorder: UnderlineInputBorder(
                                    Text(
                                         '01.11.2019',
                                         style: TextStyle(
-                                          fontSize: 14,
+                                          fontSize: 10,
                                           color: Colors.pinkAccent,
                                           
                                         ),
@@ -412,7 +415,7 @@ focusedBorder: UnderlineInputBorder(
                                          Text(
                                         'New competition mode and',
                                         style: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: 10,
                                           color: Colors.black,
                                           
                                         ),
@@ -420,7 +423,7 @@ focusedBorder: UnderlineInputBorder(
                                          Text(
                                         'ratings comming soon',
                                         style: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: 10,
                                           color: Colors.black,
                                           
                                         ),
@@ -435,6 +438,7 @@ focusedBorder: UnderlineInputBorder(
                               color: Colors.pink,
                               height: 0, 
                             ),
+                            SizedBox(height: 2.h),
                              Dismissible(
   key: UniqueKey(), 
   onDismissed: (DismissDirection direction) {
@@ -451,11 +455,12 @@ focusedBorder: UnderlineInputBorder(
   ),
                                child:
                               Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                              Image.asset(
                       'assets/images/Ellipse.png',
                       fit: BoxFit.fitWidth,
-                      width: 22.0.w,
+                      width: 18.0.w,
                     ),
                               SizedBox(width: 20),
                               Column(
@@ -466,7 +471,7 @@ focusedBorder: UnderlineInputBorder(
                                   Text(
                                     'Tayeeb Ibrahim',
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       color: Colors.pinkAccent,
                                       
                                     ),
@@ -475,7 +480,7 @@ focusedBorder: UnderlineInputBorder(
                                    Text(
                                         '23.09.2019',
                                         style: TextStyle(
-                                          fontSize: 14,
+                                          fontSize: 10,
                                           color: Colors.pinkAccent,
                                           
                                         ),
@@ -502,7 +507,7 @@ focusedBorder: UnderlineInputBorder(
                             ]
                           ),
                          ),
-      ),
+      
     );
   }
 }

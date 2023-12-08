@@ -18,7 +18,7 @@ class _PaymentViewState extends State<PaymentView> {
        child: Column(
         children: [
            Padding(
-                                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                                  padding: EdgeInsets.symmetric(horizontal: 30.0),
                                   child:
           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -144,7 +144,7 @@ class _PaymentViewState extends State<PaymentView> {
                                           style: TextStyle(
                                             decoration: TextDecoration.underline,
                                             color: Colors.black,
-                                            fontSize: 15,
+                                            fontSize: 10,
                                           
                                           ),
                                         ),
