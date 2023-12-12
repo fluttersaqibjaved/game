@@ -6,6 +6,7 @@ import 'package:gametime/Views/Drawer/Profile_view.dart';
 import 'package:gametime/Views/Drawer/Schedule_view.dart';
 import 'package:gametime/Views/Drawer/Statistics_view.dart';
 import 'package:gametime/Views/Drawer/Sticker_view.dart';
+import 'package:gametime/Views/Drawer/local_view.dart';
 import 'package:gametime/Views/Login%20Detail/login_view.dart';
 import 'package:sizer/sizer.dart';
 
@@ -278,7 +279,7 @@ class _DrawerViewState extends State<DrawerView> {
                             onPressed: () {
                                 Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => StickerView(),
+                              builder: (context) => LocalView(),
                             ),
                           );
                     },

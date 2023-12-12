@@ -1,9 +1,12 @@
 import 'dart:io';
 
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sizer/sizer.dart';
+
 
 class StickerView extends StatefulWidget {
   const StickerView({Key? key}) : super(key: key);
@@ -29,6 +32,7 @@ class _StickerViewState extends State<StickerView> {
     if (imagePath != null && imagePath.isNotEmpty) {
       setState(() {
         _image = File(imagePath);
+        
       });
     }
   }
@@ -46,6 +50,19 @@ class _StickerViewState extends State<StickerView> {
     final pickedFile = await _picker.pickImage(source: ImageSource.gallery);
     _setImage(pickedFile);
   }
+
+Future<void> _openFile() async {
+  FilePickerResult? result = await FilePicker.platform.pickFiles();
+
+  if (result != null) {
+   
+  } else {
+   
+  }
+}
+
+
+
 
   Future<void> _setImage(XFile? pickedFile) async {
     setState(() {
@@ -117,39 +134,26 @@ class _StickerViewState extends State<StickerView> {
                 ),
               ),
               SizedBox(height: 2.h),
-                 GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                  _openGallery();
-                },
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.file_copy_sharp,
-                      size: 30.0,
-                    ),
-                    SizedBox(width: 2.w),
-                    Text('Select File'),
-                  ],
-                ),
-              ),
+                GestureDetector(
+  onTap: () {
+    Navigator.pop(context);
+    _openFile();
+  },
+  child: Row(
+    children: [
+      Icon(
+        Icons.file_copy_sharp,
+        size: 30.0,
+      ),
+      SizedBox(width: 2.w),
+      Text('Select File'),
+    ],
+  ),
+),
+
               SizedBox(height: 2.h),
-                 GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                  _openGallery();
-                },
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.library_add_check,
-                      size: 30.0,
-                    ),
-                    SizedBox(width: 2.w),
-                    Text('Sticker Library'),
-                  ],
-                ),
-              ),
+              
+
             ],
           ),
         );
@@ -191,127 +195,161 @@ class EditImagePage extends StatefulWidget {
 }
 
 class _EditImagePageState extends State<EditImagePage> {
-  
-  
-File? selectedImage;
+  TextEditingController _textEditingController = TextEditingController();
+  String _displayedText = "Your text here";
+  late File imageFile;
+  double _angle = 0;
 
-  void _addImageToContainer() {
-    setState(() {
-      
-      selectedImage = widget.imageFile;
-    });
+  @override
+  void initState() {
+    super.initState();
+    imageFile = widget.imageFile;
   }
-    double _angle = 0; 
-    
-  
+
+  @override
+  void dispose() {
+    _textEditingController.dispose();
+    super.dispose();
+  }
+
+   Future<void> _cropImage() async {
+    final croppedFile = await ImageCropper().cropImage(
+      sourcePath: imageFile.path,
+      aspectRatioPresets: Platform.isAndroid
+          ? [
+              CropAspectRatioPreset.square,
+              CropAspectRatioPreset.ratio3x2,
+              CropAspectRatioPreset.original,
+              CropAspectRatioPreset.ratio4x3,
+              CropAspectRatioPreset.ratio16x9
+            ]
+          : [
+              CropAspectRatioPreset.original,
+              CropAspectRatioPreset.square,
+              CropAspectRatioPreset.ratio3x2,
+              CropAspectRatioPreset.ratio4x3,
+              CropAspectRatioPreset.ratio5x3,
+              CropAspectRatioPreset.ratio5x4,
+              CropAspectRatioPreset.ratio7x5,
+              CropAspectRatioPreset.ratio16x9
+            ],
+      androidUiSettings: AndroidUiSettings(
+        toolbarTitle: 'Image Cropper',
+        toolbarColor: Colors.deepOrange,
+        toolbarWidgetColor: Colors.white,
+        initAspectRatio: CropAspectRatioPreset.original,
+        lockAspectRatio: false,
+      ),
+      iosUiSettings: IOSUiSettings(
+        title: 'Image Cropper',
+      ),
+    );
+
+    if (croppedFile != null) {
+      setState(() {
+        imageFile = File(croppedFile.path);
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:null,
+      appBar: null,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-              GestureDetector(
-                onTap: () {
-               _addImageToContainer(); 
-                },
-                child:   Icon(
-            Icons.check,
-            size: 50, 
-           
-          ),
-              ),
-          Transform.rotate(
-              angle: _angle,
-              child: Image.file(widget.imageFile), 
-            ),
-            
-            SizedBox(height: 20), 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            Stack(
               children: [
-                   
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  _angle += 45 * (3.1415926535 / 180); 
-                });
-              },
-              child: Text('Rotate'),
-            ),
-                
-                    ElevatedButton(
-                  onPressed: () {
-                    
-                  },
-                  child: Text('Select All'),
+                Container(
+                  child: AspectRatio(
+                    aspectRatio: 400 / 400,
+                    child: Transform.rotate(
+                      angle: _angle,
+                      child: Container(
+                        width: 20.w,
+                        height: 20.h,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(45),
+                          child: Image.file(imageFile, fit: BoxFit.contain),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
-                
-                  ElevatedButton(
-                  onPressed: () {
-                   
-                  },
-                  child: Text('Smart Select'),
+                Positioned(
+                  left: 100,
+                  top: 100,
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    color: Colors.white.withOpacity(0.5),
+                    padding: EdgeInsets.all(8),
+                    child: TextFormField(
+                      controller: _textEditingController,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                      ),
+                      decoration: InputDecoration(
+                        hintText: 'Your text here',
+                        hintStyle:
+                            TextStyle(color: Colors.black.withOpacity(0.5)),
+                        border: InputBorder.none,
+                      ),
+                      onChanged: (value) {
+                        setState(() {
+                          _displayedText = value;
+                        });
+                      },
+                    ),
+                  ),
                 ),
-              ],
-            ),
-            SizedBox(height: 10), 
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                 ElevatedButton(
-                  onPressed: () {
-                   
-                  },
-                  child: Text('Free Hand'),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      SizedBox(height: 20),
+                      ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            _angle += 45 * (3.1415926535 / 180);
+                          });
+                        },
+                        child: Text('Rotate'),
+                      ),
+                      SizedBox(width: 3.w),
+                      ElevatedButton(
+                        onPressed: () {
+                          _cropImage();
+                        },
+                        child: Text('Select All'),
+                      ),
+                      SizedBox(width: 3.w),
+                      ElevatedButton(
+                        onPressed: () async {
+                          // Implement your Smart Select logic here
+                        },
+                        child: Text('Smart Select'),
+                      ),
+                      SizedBox(width: 3.w),
+                      ElevatedButton(
+                        onPressed: () {
+                          // Implement Free Hand logic here
+                        },
+                        child: Text('Free Hand'),
+                      ),
+                      SizedBox(width: 3.w),
+                      ElevatedButton(
+                        onPressed: () {
+                          // Implement Cut Square logic here
+                        },
+                        child: Text('Cut Square'),
+                      ),
+                    ],
+                  ),
                 ),
-
-              ElevatedButton(
-  onPressed: () {
-   
-  },
-  child: Text('Cut Square'),
-),
-
-                
-             ElevatedButton(
-  onPressed: () async {
-    
-    String? userText = await showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        TextEditingController textEditingController = TextEditingController();
-        return AlertDialog(
-         
-          content: TextField(
-            controller: textEditingController,
-            decoration: InputDecoration(hintText: 'Enter text here'),
-          ),
-          actions: <Widget>[
-            TextButton(
-              onPressed: () {
-                Navigator.pop(context, textEditingController.text);
-              },
-              child: Text('OK'),
-            ),
-          ],
-        );
-      },
-    );
-
-    if (userText != null && userText.isNotEmpty) {
-     
-      setState(() {
-        
-      });
-    }
-  },
-  child: Text('Add Text'),
-),
-
               ],
             ),
           ],

@@ -38,17 +38,20 @@ dependencies:
   cupertino_icons: ^1.0.2
   sizer: ^2.0.15
   smooth_page_indicator: ^1.1.0
-  # page_indicator: ^0.4.1
+
   pin_code_fields: ^8.0.1
   intl_phone_field: ^3.2.0
   intl_phone_number_input: ^0.7.3+1
   image_picker: ^1.0.4
   image: ^3.0.2
   image_cropper: ^1.4.0 
-  # flutter_image_compress: ^0.10.0
+  shared_preferences: ^2.0.9
   emoji_picker_flutter: ^1.6.3
   geolocator: ^10.1.0
   dotted_border: ^2.1.0
+ 
+  file_picker: ^4.1.4
+  permission_handler: ^11.1.0
   
   
   
